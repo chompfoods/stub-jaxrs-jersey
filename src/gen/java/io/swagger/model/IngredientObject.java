@@ -25,7 +25,7 @@ import javax.validation.constraints.*;
  * Please read the description of each field in this API response object example. By default, the value of each field is __null__. This indicates an unknown state or that no data exists.
  */
 @Schema(description = "Please read the description of each field in this API response object example. By default, the value of each field is __null__. This indicates an unknown state or that no data exists.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T16:48:43.301Z[GMT]")public class IngredientObject   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T16:53:38.223Z[GMT]")public class IngredientObject   {
   @JsonProperty("items")
   private List<IngredientObjectItems> items = null;
 
