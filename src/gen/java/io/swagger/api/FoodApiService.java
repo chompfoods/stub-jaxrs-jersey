@@ -16,7 +16,7 @@ import java.io.InputStream;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.validation.constraints.*;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T16:45:46.877Z[GMT]")public abstract class FoodApiService {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T16:48:43.301Z[GMT]")public abstract class FoodApiService {
     public abstract Response foodBrandedBarcodePhpGet( @NotNull String code,SecurityContext securityContext) throws NotFoundException;
     public abstract Response foodBrandedIdPhpGet( @NotNull Integer id, String source,SecurityContext securityContext) throws NotFoundException;
     public abstract Response foodBrandedNamePhpGet( @NotNull String name, Integer limit,SecurityContext securityContext) throws NotFoundException;

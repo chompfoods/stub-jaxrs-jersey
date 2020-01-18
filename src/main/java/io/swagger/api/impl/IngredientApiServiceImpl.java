@@ -16,7 +16,7 @@ import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.validation.constraints.*;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T16:45:46.877Z[GMT]")public class IngredientApiServiceImpl extends IngredientApiService {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T16:48:43.301Z[GMT]")public class IngredientApiServiceImpl extends IngredientApiService {
     @Override
     public Response ingredientSearchPhpGet( @NotNull Integer find,  @NotNull Boolean list,  Boolean raw,  Integer limit, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
