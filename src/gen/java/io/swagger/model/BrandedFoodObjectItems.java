@@ -35,7 +35,7 @@ import javax.validation.constraints.*;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T16:42:42.573Z[GMT]")public class BrandedFoodObjectItems   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T16:45:46.877Z[GMT]")public class BrandedFoodObjectItems   {
   @JsonProperty("barcode")
   private String barcode = null;
 
@@ -681,11 +681,11 @@ import javax.validation.constraints.*;
   }
 
   /**
-   * An array of vitamins that this item contains
+   * An array of vitamins that can be found in this item
    * @return vitamins
    **/
   @JsonProperty("vitamins")
-  @Schema(description = "An array of vitamins that this item contains")
+  @Schema(description = "An array of vitamins that can be found in this item")
   public List<String> getVitamins() {
     return vitamins;
   }
