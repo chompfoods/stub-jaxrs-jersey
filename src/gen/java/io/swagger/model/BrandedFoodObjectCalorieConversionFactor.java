@@ -23,7 +23,7 @@ import javax.validation.constraints.*;
  * An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
  */
 @Schema(description = "An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T04:55:10.866Z[GMT]")public class BrandedFoodObjectCalorieConversionFactor   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T16:42:42.573Z[GMT]")public class BrandedFoodObjectCalorieConversionFactor   {
   @JsonProperty("protein_value")
   private BigDecimal proteinValue = null;
 
