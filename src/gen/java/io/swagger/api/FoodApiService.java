@@ -6,6 +6,7 @@ import io.swagger.model.*;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 
 import io.swagger.model.BrandedFoodObject;
+import io.swagger.model.IngredientObject;
 
 import java.util.Map;
 import java.util.List;
@@ -16,9 +17,10 @@ import java.io.InputStream;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.validation.constraints.*;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T16:53:38.223Z[GMT]")public abstract class FoodApiService {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-20T16:28:37.302Z[GMT]")public abstract class FoodApiService {
     public abstract Response foodBrandedBarcodePhpGet( @NotNull String code,SecurityContext securityContext) throws NotFoundException;
     public abstract Response foodBrandedIdPhpGet( @NotNull Integer id, String source,SecurityContext securityContext) throws NotFoundException;
     public abstract Response foodBrandedNamePhpGet( @NotNull String name, Integer limit,SecurityContext securityContext) throws NotFoundException;
     public abstract Response foodBrandedSearchPhpGet( String allergen, String brand, String category, String country, String diet, String ingredient, String keyword, String mineral, String nutrient, String palmOil, String trace, String vitamin, Integer limit, Integer page,SecurityContext securityContext) throws NotFoundException;
+    public abstract Response foodIngredientSearchPhpGet( @NotNull Integer find, @NotNull Boolean list, Boolean raw, Integer limit,SecurityContext securityContext) throws NotFoundException;
 }
