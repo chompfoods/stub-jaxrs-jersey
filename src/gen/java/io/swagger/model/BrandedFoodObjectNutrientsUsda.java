@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 /**
  * BrandedFoodObjectNutrientsUsda
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-20T16:28:37.302Z[GMT]")public class BrandedFoodObjectNutrientsUsda   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-21T14:08:31.924Z[GMT]")public class BrandedFoodObjectNutrientsUsda   {
   @JsonProperty("id")
   private Integer id = null;
 
@@ -44,14 +44,14 @@ import javax.validation.constraints.*;
   @JsonProperty("median")
   private BigDecimal median = null;
 
+  @JsonProperty("rank")
+  private Integer rank = null;
+
   @JsonProperty("data_points")
   private Integer dataPoints = null;
 
   @JsonProperty("footnote")
   private String footnote = null;
-
-  @JsonProperty("source")
-  private String source = null;
 
   @JsonProperty("description")
   private String description = null;
@@ -189,6 +189,25 @@ import javax.validation.constraints.*;
     this.median = median;
   }
 
+  public BrandedFoodObjectNutrientsUsda rank(Integer rank) {
+    this.rank = rank;
+    return this;
+  }
+
+  /**
+   * Nutrient rank
+   * @return rank
+   **/
+  @JsonProperty("rank")
+  @Schema(description = "Nutrient rank")
+  public Integer getRank() {
+    return rank;
+  }
+
+  public void setRank(Integer rank) {
+    this.rank = rank;
+  }
+
   public BrandedFoodObjectNutrientsUsda dataPoints(Integer dataPoints) {
     this.dataPoints = dataPoints;
     return this;
@@ -227,36 +246,17 @@ import javax.validation.constraints.*;
     this.footnote = footnote;
   }
 
-  public BrandedFoodObjectNutrientsUsda source(String source) {
-    this.source = source;
-    return this;
-  }
-
-  /**
-   * Description of the nutrient source
-   * @return source
-   **/
-  @JsonProperty("source")
-  @Schema(description = "Description of the nutrient source")
-  public String getSource() {
-    return source;
-  }
-
-  public void setSource(String source) {
-    this.source = source;
-  }
-
   public BrandedFoodObjectNutrientsUsda description(String description) {
     this.description = description;
     return this;
   }
 
   /**
-   * Description of how the food nutrient value was obtained
+   * Description of the nutrient source
    * @return description
    **/
   @JsonProperty("description")
-  @Schema(description = "Description of how the food nutrient value was obtained")
+  @Schema(description = "Description of the nutrient source")
   public String getDescription() {
     return description;
   }
@@ -282,15 +282,15 @@ import javax.validation.constraints.*;
         Objects.equals(this.min, brandedFoodObjectNutrientsUsda.min) &&
         Objects.equals(this.max, brandedFoodObjectNutrientsUsda.max) &&
         Objects.equals(this.median, brandedFoodObjectNutrientsUsda.median) &&
+        Objects.equals(this.rank, brandedFoodObjectNutrientsUsda.rank) &&
         Objects.equals(this.dataPoints, brandedFoodObjectNutrientsUsda.dataPoints) &&
         Objects.equals(this.footnote, brandedFoodObjectNutrientsUsda.footnote) &&
-        Objects.equals(this.source, brandedFoodObjectNutrientsUsda.source) &&
         Objects.equals(this.description, brandedFoodObjectNutrientsUsda.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, per100g, measurementUnit, min, max, median, dataPoints, footnote, source, description);
+    return Objects.hash(id, name, per100g, measurementUnit, min, max, median, rank, dataPoints, footnote, description);
   }
 
 
@@ -306,9 +306,9 @@ import javax.validation.constraints.*;
     sb.append("    min: ").append(toIndentedString(min)).append("\n");
     sb.append("    max: ").append(toIndentedString(max)).append("\n");
     sb.append("    median: ").append(toIndentedString(median)).append("\n");
+    sb.append("    rank: ").append(toIndentedString(rank)).append("\n");
     sb.append("    dataPoints: ").append(toIndentedString(dataPoints)).append("\n");
     sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
-    sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("}");
     return sb.toString();

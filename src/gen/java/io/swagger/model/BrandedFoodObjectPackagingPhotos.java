@@ -25,7 +25,7 @@ import javax.validation.constraints.*;
  * A object containing a collection of photos of this item&#x27;s packaging
  */
 @Schema(description = "A object containing a collection of photos of this item's packaging")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-20T16:28:37.302Z[GMT]")public class BrandedFoodObjectPackagingPhotos   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-21T14:08:31.924Z[GMT]")public class BrandedFoodObjectPackagingPhotos   {
   @JsonProperty("front")
   private BrandedFoodObjectPackagingPhotosFront front = null;
 
