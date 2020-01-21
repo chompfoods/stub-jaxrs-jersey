@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
  * An object containing basic packaging information about this item
  */
 @Schema(description = "An object containing basic packaging information about this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-21T14:14:30.629Z[GMT]")public class BrandedFoodObjectPackage   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-21T23:19:12.763Z[GMT]")public class BrandedFoodObjectPackage   {
   @JsonProperty("quantity")
   private Integer quantity = null;
 

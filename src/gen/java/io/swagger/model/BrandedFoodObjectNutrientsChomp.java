@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 /**
  * BrandedFoodObjectNutrientsChomp
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-21T14:14:30.629Z[GMT]")public class BrandedFoodObjectNutrientsChomp   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-21T23:19:12.763Z[GMT]")public class BrandedFoodObjectNutrientsChomp   {
   @JsonProperty("name")
   private String name = null;
 

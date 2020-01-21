@@ -23,7 +23,7 @@ import javax.validation.constraints.*;
  * An object containing information on a specific food portion found in this item
  */
 @Schema(description = "An object containing information on a specific food portion found in this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-21T14:14:30.629Z[GMT]")public class BrandedFoodObjectPortions   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-21T23:19:12.763Z[GMT]")public class BrandedFoodObjectPortions   {
   @JsonProperty("measurement_unit")
   private String measurementUnit = null;
 
