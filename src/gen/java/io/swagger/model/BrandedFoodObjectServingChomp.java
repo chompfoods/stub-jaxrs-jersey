@@ -19,74 +19,30 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import javax.validation.constraints.*;
 
 /**
- * An object containing photos of the front of this item&#x27;s packaging
+ * Serving information from as seen on ChompThis.com
  */
-@Schema(description = "An object containing photos of the front of this item's packaging")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T13:41:41.955Z[GMT]")public class BrandedFoodObjectPackagingPhotosFront   {
-  @JsonProperty("small")
-  private String small = null;
+@Schema(description = "Serving information from as seen on ChompThis.com")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T13:41:41.955Z[GMT]")public class BrandedFoodObjectServingChomp   {
+  @JsonProperty("size")
+  private String size = null;
 
-  @JsonProperty("thumb")
-  private String thumb = null;
-
-  @JsonProperty("display")
-  private String display = null;
-
-  public BrandedFoodObjectPackagingPhotosFront small(String small) {
-    this.small = small;
+  public BrandedFoodObjectServingChomp size(String size) {
+    this.size = size;
     return this;
   }
 
   /**
-   * Small photo of the front of this item&#x27;s packaging
-   * @return small
+   * Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
+   * @return size
    **/
-  @JsonProperty("small")
-  @Schema(description = "Small photo of the front of this item's packaging")
-  public String getSmall() {
-    return small;
+  @JsonProperty("size")
+  @Schema(description = "Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)")
+  public String getSize() {
+    return size;
   }
 
-  public void setSmall(String small) {
-    this.small = small;
-  }
-
-  public BrandedFoodObjectPackagingPhotosFront thumb(String thumb) {
-    this.thumb = thumb;
-    return this;
-  }
-
-  /**
-   * Thumbnail photo of the front of this item&#x27;s packaging
-   * @return thumb
-   **/
-  @JsonProperty("thumb")
-  @Schema(description = "Thumbnail photo of the front of this item's packaging")
-  public String getThumb() {
-    return thumb;
-  }
-
-  public void setThumb(String thumb) {
-    this.thumb = thumb;
-  }
-
-  public BrandedFoodObjectPackagingPhotosFront display(String display) {
-    this.display = display;
-    return this;
-  }
-
-  /**
-   * Full-sized photo of the front of this item&#x27;s packaging
-   * @return display
-   **/
-  @JsonProperty("display")
-  @Schema(description = "Full-sized photo of the front of this item's packaging")
-  public String getDisplay() {
-    return display;
-  }
-
-  public void setDisplay(String display) {
-    this.display = display;
+  public void setSize(String size) {
+    this.size = size;
   }
 
 
@@ -98,26 +54,22 @@ import javax.validation.constraints.*;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectPackagingPhotosFront brandedFoodObjectPackagingPhotosFront = (BrandedFoodObjectPackagingPhotosFront) o;
-    return Objects.equals(this.small, brandedFoodObjectPackagingPhotosFront.small) &&
-        Objects.equals(this.thumb, brandedFoodObjectPackagingPhotosFront.thumb) &&
-        Objects.equals(this.display, brandedFoodObjectPackagingPhotosFront.display);
+    BrandedFoodObjectServingChomp brandedFoodObjectServingChomp = (BrandedFoodObjectServingChomp) o;
+    return Objects.equals(this.size, brandedFoodObjectServingChomp.size);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(small, thumb, display);
+    return Objects.hash(size);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectPackagingPhotosFront {\n");
+    sb.append("class BrandedFoodObjectServingChomp {\n");
     
-    sb.append("    small: ").append(toIndentedString(small)).append("\n");
-    sb.append("    thumb: ").append(toIndentedString(thumb)).append("\n");
-    sb.append("    display: ").append(toIndentedString(display)).append("\n");
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("}");
     return sb.toString();
   }

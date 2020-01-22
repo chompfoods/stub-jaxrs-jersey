@@ -19,74 +19,74 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import javax.validation.constraints.*;
 
 /**
- * An object containing photos of the front of this item&#x27;s packaging
+ * Serving information from the USDA
  */
-@Schema(description = "An object containing photos of the front of this item's packaging")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T13:41:41.955Z[GMT]")public class BrandedFoodObjectPackagingPhotosFront   {
-  @JsonProperty("small")
-  private String small = null;
+@Schema(description = "Serving information from the USDA")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T13:41:41.955Z[GMT]")public class BrandedFoodObjectServingUsda   {
+  @JsonProperty("size")
+  private String size = null;
 
-  @JsonProperty("thumb")
-  private String thumb = null;
+  @JsonProperty("measurement_unit")
+  private String measurementUnit = null;
 
-  @JsonProperty("display")
-  private String display = null;
+  @JsonProperty("size_fulltext")
+  private String sizeFulltext = null;
 
-  public BrandedFoodObjectPackagingPhotosFront small(String small) {
-    this.small = small;
+  public BrandedFoodObjectServingUsda size(String size) {
+    this.size = size;
     return this;
   }
 
   /**
-   * Small photo of the front of this item&#x27;s packaging
-   * @return small
+   * Serving size
+   * @return size
    **/
-  @JsonProperty("small")
-  @Schema(description = "Small photo of the front of this item's packaging")
-  public String getSmall() {
-    return small;
+  @JsonProperty("size")
+  @Schema(description = "Serving size")
+  public String getSize() {
+    return size;
   }
 
-  public void setSmall(String small) {
-    this.small = small;
+  public void setSize(String size) {
+    this.size = size;
   }
 
-  public BrandedFoodObjectPackagingPhotosFront thumb(String thumb) {
-    this.thumb = thumb;
+  public BrandedFoodObjectServingUsda measurementUnit(String measurementUnit) {
+    this.measurementUnit = measurementUnit;
     return this;
   }
 
   /**
-   * Thumbnail photo of the front of this item&#x27;s packaging
-   * @return thumb
+   * Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)
+   * @return measurementUnit
    **/
-  @JsonProperty("thumb")
-  @Schema(description = "Thumbnail photo of the front of this item's packaging")
-  public String getThumb() {
-    return thumb;
+  @JsonProperty("measurement_unit")
+  @Schema(description = "Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)")
+  public String getMeasurementUnit() {
+    return measurementUnit;
   }
 
-  public void setThumb(String thumb) {
-    this.thumb = thumb;
+  public void setMeasurementUnit(String measurementUnit) {
+    this.measurementUnit = measurementUnit;
   }
 
-  public BrandedFoodObjectPackagingPhotosFront display(String display) {
-    this.display = display;
+  public BrandedFoodObjectServingUsda sizeFulltext(String sizeFulltext) {
+    this.sizeFulltext = sizeFulltext;
     return this;
   }
 
   /**
-   * Full-sized photo of the front of this item&#x27;s packaging
-   * @return display
+   * Serving size description
+   * @return sizeFulltext
    **/
-  @JsonProperty("display")
-  @Schema(description = "Full-sized photo of the front of this item's packaging")
-  public String getDisplay() {
-    return display;
+  @JsonProperty("size_fulltext")
+  @Schema(description = "Serving size description")
+  public String getSizeFulltext() {
+    return sizeFulltext;
   }
 
-  public void setDisplay(String display) {
-    this.display = display;
+  public void setSizeFulltext(String sizeFulltext) {
+    this.sizeFulltext = sizeFulltext;
   }
 
 
@@ -98,26 +98,26 @@ import javax.validation.constraints.*;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectPackagingPhotosFront brandedFoodObjectPackagingPhotosFront = (BrandedFoodObjectPackagingPhotosFront) o;
-    return Objects.equals(this.small, brandedFoodObjectPackagingPhotosFront.small) &&
-        Objects.equals(this.thumb, brandedFoodObjectPackagingPhotosFront.thumb) &&
-        Objects.equals(this.display, brandedFoodObjectPackagingPhotosFront.display);
+    BrandedFoodObjectServingUsda brandedFoodObjectServingUsda = (BrandedFoodObjectServingUsda) o;
+    return Objects.equals(this.size, brandedFoodObjectServingUsda.size) &&
+        Objects.equals(this.measurementUnit, brandedFoodObjectServingUsda.measurementUnit) &&
+        Objects.equals(this.sizeFulltext, brandedFoodObjectServingUsda.sizeFulltext);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(small, thumb, display);
+    return Objects.hash(size, measurementUnit, sizeFulltext);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectPackagingPhotosFront {\n");
+    sb.append("class BrandedFoodObjectServingUsda {\n");
     
-    sb.append("    small: ").append(toIndentedString(small)).append("\n");
-    sb.append("    thumb: ").append(toIndentedString(thumb)).append("\n");
-    sb.append("    display: ").append(toIndentedString(display)).append("\n");
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
+    sb.append("    measurementUnit: ").append(toIndentedString(measurementUnit)).append("\n");
+    sb.append("    sizeFulltext: ").append(toIndentedString(sizeFulltext)).append("\n");
     sb.append("}");
     return sb.toString();
   }
