@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
  * An object containing this item&#x27;s ingredients in order of highest value to least
  */
 @Schema(description = "An object containing this item's ingredients in order of highest value to least")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T13:41:41.955Z[GMT]")public class BrandedFoodObjectIngredients   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T14:07:33.797Z[GMT]")public class BrandedFoodObjectIngredients   {
   @JsonProperty("chomp")
   private String chomp = null;
 
@@ -35,11 +35,11 @@ import javax.validation.constraints.*;
   }
 
   /**
-   * This item&#x27;s ingredients as seen on ChompThis.com
+   * Ingredients for this item from Chomp&#x27;s internal database
    * @return chomp
    **/
   @JsonProperty("chomp")
-  @Schema(description = "This item's ingredients as seen on ChompThis.com")
+  @Schema(description = "Ingredients for this item from Chomp's internal database")
   public String getChomp() {
     return chomp;
   }
