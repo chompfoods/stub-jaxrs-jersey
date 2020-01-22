@@ -19,52 +19,52 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import javax.validation.constraints.*;
 
 /**
- * An object containing basic packaging information about this item
+ * An object containing this item&#x27;s ingredients in order of highest value to least
  */
-@Schema(description = "An object containing basic packaging information about this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T12:50:40.059Z[GMT]")public class BrandedFoodObjectPackage   {
-  @JsonProperty("quantity")
-  private Integer quantity = null;
+@Schema(description = "An object containing this item's ingredients in order of highest value to least")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T12:50:40.059Z[GMT]")public class BrandedFoodObjectIngredients   {
+  @JsonProperty("chomp")
+  private String chomp = null;
 
-  @JsonProperty("size")
-  private String size = null;
+  @JsonProperty("usda")
+  private String usda = null;
 
-  public BrandedFoodObjectPackage quantity(Integer quantity) {
-    this.quantity = quantity;
+  public BrandedFoodObjectIngredients chomp(String chomp) {
+    this.chomp = chomp;
     return this;
   }
 
   /**
-   * Package quantity
-   * @return quantity
+   * This item&#x27;s ingredients as seen on ChompThis.com
+   * @return chomp
    **/
-  @JsonProperty("quantity")
-  @Schema(description = "Package quantity")
-  public Integer getQuantity() {
-    return quantity;
+  @JsonProperty("chomp")
+  @Schema(description = "This item's ingredients as seen on ChompThis.com")
+  public String getChomp() {
+    return chomp;
   }
 
-  public void setQuantity(Integer quantity) {
-    this.quantity = quantity;
+  public void setChomp(String chomp) {
+    this.chomp = chomp;
   }
 
-  public BrandedFoodObjectPackage size(String size) {
-    this.size = size;
+  public BrandedFoodObjectIngredients usda(String usda) {
+    this.usda = usda;
     return this;
   }
 
   /**
-   * Package size
-   * @return size
+   * This branded food item&#x27;s ingredients according to the USDA
+   * @return usda
    **/
-  @JsonProperty("size")
-  @Schema(description = "Package size")
-  public String getSize() {
-    return size;
+  @JsonProperty("usda")
+  @Schema(description = "This branded food item's ingredients according to the USDA")
+  public String getUsda() {
+    return usda;
   }
 
-  public void setSize(String size) {
-    this.size = size;
+  public void setUsda(String usda) {
+    this.usda = usda;
   }
 
 
@@ -76,24 +76,24 @@ import javax.validation.constraints.*;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectPackage brandedFoodObjectPackage = (BrandedFoodObjectPackage) o;
-    return Objects.equals(this.quantity, brandedFoodObjectPackage.quantity) &&
-        Objects.equals(this.size, brandedFoodObjectPackage.size);
+    BrandedFoodObjectIngredients brandedFoodObjectIngredients = (BrandedFoodObjectIngredients) o;
+    return Objects.equals(this.chomp, brandedFoodObjectIngredients.chomp) &&
+        Objects.equals(this.usda, brandedFoodObjectIngredients.usda);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(quantity, size);
+    return Objects.hash(chomp, usda);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectPackage {\n");
+    sb.append("class BrandedFoodObjectIngredients {\n");
     
-    sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
-    sb.append("    size: ").append(toIndentedString(size)).append("\n");
+    sb.append("    chomp: ").append(toIndentedString(chomp)).append("\n");
+    sb.append("    usda: ").append(toIndentedString(usda)).append("\n");
     sb.append("}");
     return sb.toString();
   }
