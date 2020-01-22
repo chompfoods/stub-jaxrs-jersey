@@ -26,7 +26,7 @@ import javax.validation.constraints.*;
  * An object containing nutrient information from multiple sources
  */
 @Schema(description = "An object containing nutrient information from multiple sources")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T12:50:40.059Z[GMT]")public class BrandedFoodObjectNutrients   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T12:55:44.028Z[GMT]")public class BrandedFoodObjectNutrients   {
   @JsonProperty("chomp")
   private List<BrandedFoodObjectNutrientsChomp> chomp = null;
 

@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
  * An object containing this item&#x27;s ingredients in order of highest value to least
  */
 @Schema(description = "An object containing this item's ingredients in order of highest value to least")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T12:50:40.059Z[GMT]")public class BrandedFoodObjectIngredients   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T12:55:44.028Z[GMT]")public class BrandedFoodObjectIngredients   {
   @JsonProperty("chomp")
   private String chomp = null;
 
