@@ -25,7 +25,7 @@ import javax.validation.constraints.*;
  * An object containing nutrient information from each source
  */
 @Schema(description = "An object containing nutrient information from each source")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:12:53.239Z[GMT]")public class IngredientObjectNutrients   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:13:51.415Z[GMT]")public class IngredientObjectNutrients   {
   @JsonProperty("usda")
   private List<BrandedFoodObjectNutrientsUsda> usda = null;
 

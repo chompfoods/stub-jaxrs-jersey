@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
  * Serving information from Chomp&#x27;s internal database
  */
 @Schema(description = "Serving information from Chomp's internal database")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:12:53.239Z[GMT]")public class BrandedFoodObjectServingChomp   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:13:51.415Z[GMT]")public class BrandedFoodObjectServingChomp   {
   @JsonProperty("size")
   private String size = null;
 
