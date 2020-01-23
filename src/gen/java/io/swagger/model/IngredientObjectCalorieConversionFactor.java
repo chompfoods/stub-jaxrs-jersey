@@ -16,55 +16,78 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.math.BigDecimal;
 import javax.validation.constraints.*;
 
 /**
- * An object containing additional information on the countries where this item is found
+ * An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
  */
-@Schema(description = "An object containing additional information on the countries where this item is found")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:15:58.444Z[GMT]")public class BrandedFoodObjectCountryDetails   {
-  @JsonProperty("english_speaking")
-  private Integer englishSpeaking = null;
+@Schema(description = "An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:15:58.444Z[GMT]")public class IngredientObjectCalorieConversionFactor   {
+  @JsonProperty("protein_value")
+  private BigDecimal proteinValue = null;
 
-  @JsonProperty("non_english_speaking")
-  private Integer nonEnglishSpeaking = null;
+  @JsonProperty("fat_value")
+  private BigDecimal fatValue = null;
 
-  public BrandedFoodObjectCountryDetails englishSpeaking(Integer englishSpeaking) {
-    this.englishSpeaking = englishSpeaking;
+  @JsonProperty("carbohydrate_value")
+  private BigDecimal carbohydrateValue = null;
+
+  public IngredientObjectCalorieConversionFactor proteinValue(BigDecimal proteinValue) {
+    this.proteinValue = proteinValue;
     return this;
   }
 
   /**
-   * The number of countries where English is the country&#x27;s primary language
-   * @return englishSpeaking
+   * The multiplication factor for protein
+   * @return proteinValue
    **/
-  @JsonProperty("english_speaking")
-  @Schema(description = "The number of countries where English is the country's primary language")
-  public Integer getEnglishSpeaking() {
-    return englishSpeaking;
+  @JsonProperty("protein_value")
+  @Schema(description = "The multiplication factor for protein")
+  public BigDecimal getProteinValue() {
+    return proteinValue;
   }
 
-  public void setEnglishSpeaking(Integer englishSpeaking) {
-    this.englishSpeaking = englishSpeaking;
+  public void setProteinValue(BigDecimal proteinValue) {
+    this.proteinValue = proteinValue;
   }
 
-  public BrandedFoodObjectCountryDetails nonEnglishSpeaking(Integer nonEnglishSpeaking) {
-    this.nonEnglishSpeaking = nonEnglishSpeaking;
+  public IngredientObjectCalorieConversionFactor fatValue(BigDecimal fatValue) {
+    this.fatValue = fatValue;
     return this;
   }
 
   /**
-   * The number of countries where English is not the country&#x27;s primary language
-   * @return nonEnglishSpeaking
+   * The multiplication factor for fat
+   * @return fatValue
    **/
-  @JsonProperty("non_english_speaking")
-  @Schema(description = "The number of countries where English is not the country's primary language")
-  public Integer getNonEnglishSpeaking() {
-    return nonEnglishSpeaking;
+  @JsonProperty("fat_value")
+  @Schema(description = "The multiplication factor for fat")
+  public BigDecimal getFatValue() {
+    return fatValue;
   }
 
-  public void setNonEnglishSpeaking(Integer nonEnglishSpeaking) {
-    this.nonEnglishSpeaking = nonEnglishSpeaking;
+  public void setFatValue(BigDecimal fatValue) {
+    this.fatValue = fatValue;
+  }
+
+  public IngredientObjectCalorieConversionFactor carbohydrateValue(BigDecimal carbohydrateValue) {
+    this.carbohydrateValue = carbohydrateValue;
+    return this;
+  }
+
+  /**
+   * The multiplication factor for carbohydrates
+   * @return carbohydrateValue
+   **/
+  @JsonProperty("carbohydrate_value")
+  @Schema(description = "The multiplication factor for carbohydrates")
+  public BigDecimal getCarbohydrateValue() {
+    return carbohydrateValue;
+  }
+
+  public void setCarbohydrateValue(BigDecimal carbohydrateValue) {
+    this.carbohydrateValue = carbohydrateValue;
   }
 
 
@@ -76,24 +99,26 @@ import javax.validation.constraints.*;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectCountryDetails brandedFoodObjectCountryDetails = (BrandedFoodObjectCountryDetails) o;
-    return Objects.equals(this.englishSpeaking, brandedFoodObjectCountryDetails.englishSpeaking) &&
-        Objects.equals(this.nonEnglishSpeaking, brandedFoodObjectCountryDetails.nonEnglishSpeaking);
+    IngredientObjectCalorieConversionFactor ingredientObjectCalorieConversionFactor = (IngredientObjectCalorieConversionFactor) o;
+    return Objects.equals(this.proteinValue, ingredientObjectCalorieConversionFactor.proteinValue) &&
+        Objects.equals(this.fatValue, ingredientObjectCalorieConversionFactor.fatValue) &&
+        Objects.equals(this.carbohydrateValue, ingredientObjectCalorieConversionFactor.carbohydrateValue);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(englishSpeaking, nonEnglishSpeaking);
+    return Objects.hash(proteinValue, fatValue, carbohydrateValue);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectCountryDetails {\n");
+    sb.append("class IngredientObjectCalorieConversionFactor {\n");
     
-    sb.append("    englishSpeaking: ").append(toIndentedString(englishSpeaking)).append("\n");
-    sb.append("    nonEnglishSpeaking: ").append(toIndentedString(nonEnglishSpeaking)).append("\n");
+    sb.append("    proteinValue: ").append(toIndentedString(proteinValue)).append("\n");
+    sb.append("    fatValue: ").append(toIndentedString(fatValue)).append("\n");
+    sb.append("    carbohydrateValue: ").append(toIndentedString(carbohydrateValue)).append("\n");
     sb.append("}");
     return sb.toString();
   }
