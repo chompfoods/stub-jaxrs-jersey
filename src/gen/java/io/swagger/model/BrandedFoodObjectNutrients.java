@@ -15,76 +15,145 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.model.BrandedFoodObjectNutrientsChomp;
-import io.swagger.model.BrandedFoodObjectNutrientsUsda;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
 import javax.validation.constraints.*;
 
 /**
- * An object containing nutrient information from multiple sources
+ * An object containing information for a specific nutrient found in this food item
  */
-@Schema(description = "An object containing nutrient information from multiple sources")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:15:58.444Z[GMT]")public class BrandedFoodObjectNutrients   {
-  @JsonProperty("chomp")
-  private List<BrandedFoodObjectNutrientsChomp> chomp = null;
+@Schema(description = "An object containing information for a specific nutrient found in this food item")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:57:41.551Z[GMT]")public class BrandedFoodObjectNutrients   {
+  @JsonProperty("name")
+  private String name = null;
 
-  @JsonProperty("usda")
-  private List<BrandedFoodObjectNutrientsUsda> usda = null;
+  @JsonProperty("per_100g")
+  private BigDecimal per100g = null;
 
-  public BrandedFoodObjectNutrients chomp(List<BrandedFoodObjectNutrientsChomp> chomp) {
-    this.chomp = chomp;
-    return this;
-  }
+  @JsonProperty("measurement_unit")
+  private String measurementUnit = null;
 
-  public BrandedFoodObjectNutrients addChompItem(BrandedFoodObjectNutrientsChomp chompItem) {
-    if (this.chomp == null) {
-      this.chomp = new ArrayList<BrandedFoodObjectNutrientsChomp>();
-    }
-    this.chomp.add(chompItem);
-    return this;
-  }
+  @JsonProperty("rank")
+  private Integer rank = null;
 
-  /**
-   * An array containing an object for each nutrient data point
-   * @return chomp
-   **/
-  @JsonProperty("chomp")
-  @Schema(description = "An array containing an object for each nutrient data point")
-  public List<BrandedFoodObjectNutrientsChomp> getChomp() {
-    return chomp;
-  }
+  @JsonProperty("data_points")
+  private Integer dataPoints = null;
 
-  public void setChomp(List<BrandedFoodObjectNutrientsChomp> chomp) {
-    this.chomp = chomp;
-  }
+  @JsonProperty("description")
+  private String description = null;
 
-  public BrandedFoodObjectNutrients usda(List<BrandedFoodObjectNutrientsUsda> usda) {
-    this.usda = usda;
-    return this;
-  }
-
-  public BrandedFoodObjectNutrients addUsdaItem(BrandedFoodObjectNutrientsUsda usdaItem) {
-    if (this.usda == null) {
-      this.usda = new ArrayList<BrandedFoodObjectNutrientsUsda>();
-    }
-    this.usda.add(usdaItem);
+  public BrandedFoodObjectNutrients name(String name) {
+    this.name = name;
     return this;
   }
 
   /**
-   * An array containing an object for each nutrient data point as found in the USDA database
-   * @return usda
+   * Nutrient name
+   * @return name
    **/
-  @JsonProperty("usda")
-  @Schema(description = "An array containing an object for each nutrient data point as found in the USDA database")
-  public List<BrandedFoodObjectNutrientsUsda> getUsda() {
-    return usda;
+  @JsonProperty("name")
+  @Schema(description = "Nutrient name")
+  public String getName() {
+    return name;
   }
 
-  public void setUsda(List<BrandedFoodObjectNutrientsUsda> usda) {
-    this.usda = usda;
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public BrandedFoodObjectNutrients per100g(BigDecimal per100g) {
+    this.per100g = per100g;
+    return this;
+  }
+
+  /**
+   * Amount of the nutrient per 100g of food
+   * @return per100g
+   **/
+  @JsonProperty("per_100g")
+  @Schema(description = "Amount of the nutrient per 100g of food")
+  public BigDecimal getPer100g() {
+    return per100g;
+  }
+
+  public void setPer100g(BigDecimal per100g) {
+    this.per100g = per100g;
+  }
+
+  public BrandedFoodObjectNutrients measurementUnit(String measurementUnit) {
+    this.measurementUnit = measurementUnit;
+    return this;
+  }
+
+  /**
+   * The unit used for the measure of this nutrient
+   * @return measurementUnit
+   **/
+  @JsonProperty("measurement_unit")
+  @Schema(description = "The unit used for the measure of this nutrient")
+  public String getMeasurementUnit() {
+    return measurementUnit;
+  }
+
+  public void setMeasurementUnit(String measurementUnit) {
+    this.measurementUnit = measurementUnit;
+  }
+
+  public BrandedFoodObjectNutrients rank(Integer rank) {
+    this.rank = rank;
+    return this;
+  }
+
+  /**
+   * Nutrient rank
+   * @return rank
+   **/
+  @JsonProperty("rank")
+  @Schema(description = "Nutrient rank")
+  public Integer getRank() {
+    return rank;
+  }
+
+  public void setRank(Integer rank) {
+    this.rank = rank;
+  }
+
+  public BrandedFoodObjectNutrients dataPoints(Integer dataPoints) {
+    this.dataPoints = dataPoints;
+    return this;
+  }
+
+  /**
+   * Number of observations on which the value is based
+   * @return dataPoints
+   **/
+  @JsonProperty("data_points")
+  @Schema(description = "Number of observations on which the value is based")
+  public Integer getDataPoints() {
+    return dataPoints;
+  }
+
+  public void setDataPoints(Integer dataPoints) {
+    this.dataPoints = dataPoints;
+  }
+
+  public BrandedFoodObjectNutrients description(String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Description of the nutrient source
+   * @return description
+   **/
+  @JsonProperty("description")
+  @Schema(description = "Description of the nutrient source")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
 
@@ -97,13 +166,17 @@ import javax.validation.constraints.*;
       return false;
     }
     BrandedFoodObjectNutrients brandedFoodObjectNutrients = (BrandedFoodObjectNutrients) o;
-    return Objects.equals(this.chomp, brandedFoodObjectNutrients.chomp) &&
-        Objects.equals(this.usda, brandedFoodObjectNutrients.usda);
+    return Objects.equals(this.name, brandedFoodObjectNutrients.name) &&
+        Objects.equals(this.per100g, brandedFoodObjectNutrients.per100g) &&
+        Objects.equals(this.measurementUnit, brandedFoodObjectNutrients.measurementUnit) &&
+        Objects.equals(this.rank, brandedFoodObjectNutrients.rank) &&
+        Objects.equals(this.dataPoints, brandedFoodObjectNutrients.dataPoints) &&
+        Objects.equals(this.description, brandedFoodObjectNutrients.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(chomp, usda);
+    return Objects.hash(name, per100g, measurementUnit, rank, dataPoints, description);
   }
 
 
@@ -112,8 +185,12 @@ import javax.validation.constraints.*;
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandedFoodObjectNutrients {\n");
     
-    sb.append("    chomp: ").append(toIndentedString(chomp)).append("\n");
-    sb.append("    usda: ").append(toIndentedString(usda)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    per100g: ").append(toIndentedString(per100g)).append("\n");
+    sb.append("    measurementUnit: ").append(toIndentedString(measurementUnit)).append("\n");
+    sb.append("    rank: ").append(toIndentedString(rank)).append("\n");
+    sb.append("    dataPoints: ").append(toIndentedString(dataPoints)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("}");
     return sb.toString();
   }

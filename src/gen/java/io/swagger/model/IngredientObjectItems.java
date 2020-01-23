@@ -30,7 +30,7 @@ import javax.validation.constraints.*;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:15:58.444Z[GMT]")public class IngredientObjectItems   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:57:41.551Z[GMT]")public class IngredientObjectItems   {
   @JsonProperty("name")
   private String name = null;
 
@@ -38,7 +38,7 @@ import javax.validation.constraints.*;
   private List<String> categories = null;
 
   @JsonProperty("nutrients")
-  private IngredientObjectNutrients nutrients = null;
+  private List<IngredientObjectNutrients> nutrients = null;
 
   @JsonProperty("calorie_conversion_factor")
   private IngredientObjectCalorieConversionFactor calorieConversionFactor = null;
@@ -110,22 +110,30 @@ import javax.validation.constraints.*;
     this.categories = categories;
   }
 
-  public IngredientObjectItems nutrients(IngredientObjectNutrients nutrients) {
+  public IngredientObjectItems nutrients(List<IngredientObjectNutrients> nutrients) {
     this.nutrients = nutrients;
     return this;
   }
 
+  public IngredientObjectItems addNutrientsItem(IngredientObjectNutrients nutrientsItem) {
+    if (this.nutrients == null) {
+      this.nutrients = new ArrayList<IngredientObjectNutrients>();
+    }
+    this.nutrients.add(nutrientsItem);
+    return this;
+  }
+
   /**
-   * Get nutrients
+   * An array containing nutrient informatio objects for this food item
    * @return nutrients
    **/
   @JsonProperty("nutrients")
-  @Schema(description = "")
-  public IngredientObjectNutrients getNutrients() {
+  @Schema(description = "An array containing nutrient informatio objects for this food item")
+  public List<IngredientObjectNutrients> getNutrients() {
     return nutrients;
   }
 
-  public void setNutrients(IngredientObjectNutrients nutrients) {
+  public void setNutrients(List<IngredientObjectNutrients> nutrients) {
     this.nutrients = nutrients;
   }
 

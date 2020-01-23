@@ -15,8 +15,6 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.model.BrandedFoodObjectServingChomp;
-import io.swagger.model.BrandedFoodObjectServingUsda;
 import io.swagger.v3.oas.annotations.media.Schema;
 import javax.validation.constraints.*;
 
@@ -24,49 +22,71 @@ import javax.validation.constraints.*;
  * An object containing serving information for this item
  */
 @Schema(description = "An object containing serving information for this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:15:58.444Z[GMT]")public class BrandedFoodObjectServing   {
-  @JsonProperty("chomp")
-  private BrandedFoodObjectServingChomp chomp = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:57:41.551Z[GMT]")public class BrandedFoodObjectServing   {
+  @JsonProperty("size")
+  private String size = null;
 
-  @JsonProperty("usda")
-  private BrandedFoodObjectServingUsda usda = null;
+  @JsonProperty("measurement_unit")
+  private String measurementUnit = null;
 
-  public BrandedFoodObjectServing chomp(BrandedFoodObjectServingChomp chomp) {
-    this.chomp = chomp;
+  @JsonProperty("size_fulltext")
+  private String sizeFulltext = null;
+
+  public BrandedFoodObjectServing size(String size) {
+    this.size = size;
     return this;
   }
 
   /**
-   * Get chomp
-   * @return chomp
+   * Serving size
+   * @return size
    **/
-  @JsonProperty("chomp")
-  @Schema(description = "")
-  public BrandedFoodObjectServingChomp getChomp() {
-    return chomp;
+  @JsonProperty("size")
+  @Schema(description = "Serving size")
+  public String getSize() {
+    return size;
   }
 
-  public void setChomp(BrandedFoodObjectServingChomp chomp) {
-    this.chomp = chomp;
+  public void setSize(String size) {
+    this.size = size;
   }
 
-  public BrandedFoodObjectServing usda(BrandedFoodObjectServingUsda usda) {
-    this.usda = usda;
+  public BrandedFoodObjectServing measurementUnit(String measurementUnit) {
+    this.measurementUnit = measurementUnit;
     return this;
   }
 
   /**
-   * Get usda
-   * @return usda
+   * Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)
+   * @return measurementUnit
    **/
-  @JsonProperty("usda")
-  @Schema(description = "")
-  public BrandedFoodObjectServingUsda getUsda() {
-    return usda;
+  @JsonProperty("measurement_unit")
+  @Schema(description = "Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)")
+  public String getMeasurementUnit() {
+    return measurementUnit;
   }
 
-  public void setUsda(BrandedFoodObjectServingUsda usda) {
-    this.usda = usda;
+  public void setMeasurementUnit(String measurementUnit) {
+    this.measurementUnit = measurementUnit;
+  }
+
+  public BrandedFoodObjectServing sizeFulltext(String sizeFulltext) {
+    this.sizeFulltext = sizeFulltext;
+    return this;
+  }
+
+  /**
+   * Serving size description
+   * @return sizeFulltext
+   **/
+  @JsonProperty("size_fulltext")
+  @Schema(description = "Serving size description")
+  public String getSizeFulltext() {
+    return sizeFulltext;
+  }
+
+  public void setSizeFulltext(String sizeFulltext) {
+    this.sizeFulltext = sizeFulltext;
   }
 
 
@@ -79,13 +99,14 @@ import javax.validation.constraints.*;
       return false;
     }
     BrandedFoodObjectServing brandedFoodObjectServing = (BrandedFoodObjectServing) o;
-    return Objects.equals(this.chomp, brandedFoodObjectServing.chomp) &&
-        Objects.equals(this.usda, brandedFoodObjectServing.usda);
+    return Objects.equals(this.size, brandedFoodObjectServing.size) &&
+        Objects.equals(this.measurementUnit, brandedFoodObjectServing.measurementUnit) &&
+        Objects.equals(this.sizeFulltext, brandedFoodObjectServing.sizeFulltext);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(chomp, usda);
+    return Objects.hash(size, measurementUnit, sizeFulltext);
   }
 
 
@@ -94,8 +115,9 @@ import javax.validation.constraints.*;
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandedFoodObjectServing {\n");
     
-    sb.append("    chomp: ").append(toIndentedString(chomp)).append("\n");
-    sb.append("    usda: ").append(toIndentedString(usda)).append("\n");
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
+    sb.append("    measurementUnit: ").append(toIndentedString(measurementUnit)).append("\n");
+    sb.append("    sizeFulltext: ").append(toIndentedString(sizeFulltext)).append("\n");
     sb.append("}");
     return sb.toString();
   }

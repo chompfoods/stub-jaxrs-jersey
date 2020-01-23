@@ -18,7 +18,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.model.BrandedFoodObjectCountryDetails;
 import io.swagger.model.BrandedFoodObjectDietFlags;
 import io.swagger.model.BrandedFoodObjectDietLabels;
-import io.swagger.model.BrandedFoodObjectIngredients;
 import io.swagger.model.BrandedFoodObjectNutrients;
 import io.swagger.model.BrandedFoodObjectPackage;
 import io.swagger.model.BrandedFoodObjectPackagingPhotos;
@@ -32,7 +31,7 @@ import javax.validation.constraints.*;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:15:58.444Z[GMT]")public class BrandedFoodObjectItems   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:57:41.551Z[GMT]")public class BrandedFoodObjectItems   {
   @JsonProperty("barcode")
   private String barcode = null;
 
@@ -43,7 +42,7 @@ import javax.validation.constraints.*;
   private String brand = null;
 
   @JsonProperty("ingredients")
-  private BrandedFoodObjectIngredients ingredients = null;
+  private String ingredients = null;
 
   @JsonProperty("package")
   private BrandedFoodObjectPackage _package = null;
@@ -55,7 +54,7 @@ import javax.validation.constraints.*;
   private List<String> categories = null;
 
   @JsonProperty("nutrients")
-  private BrandedFoodObjectNutrients nutrients = null;
+  private List<BrandedFoodObjectNutrients> nutrients = null;
 
   @JsonProperty("diet_labels")
   private BrandedFoodObjectDietLabels dietLabels = null;
@@ -159,22 +158,22 @@ import javax.validation.constraints.*;
     this.brand = brand;
   }
 
-  public BrandedFoodObjectItems ingredients(BrandedFoodObjectIngredients ingredients) {
+  public BrandedFoodObjectItems ingredients(String ingredients) {
     this.ingredients = ingredients;
     return this;
   }
 
   /**
-   * Get ingredients
+   * This food item&#x27;s ingredients from greatest quantity to least
    * @return ingredients
    **/
   @JsonProperty("ingredients")
-  @Schema(description = "")
-  public BrandedFoodObjectIngredients getIngredients() {
+  @Schema(description = "This food item's ingredients from greatest quantity to least")
+  public String getIngredients() {
     return ingredients;
   }
 
-  public void setIngredients(BrandedFoodObjectIngredients ingredients) {
+  public void setIngredients(String ingredients) {
     this.ingredients = ingredients;
   }
 
@@ -243,22 +242,30 @@ import javax.validation.constraints.*;
     this.categories = categories;
   }
 
-  public BrandedFoodObjectItems nutrients(BrandedFoodObjectNutrients nutrients) {
+  public BrandedFoodObjectItems nutrients(List<BrandedFoodObjectNutrients> nutrients) {
     this.nutrients = nutrients;
     return this;
   }
 
+  public BrandedFoodObjectItems addNutrientsItem(BrandedFoodObjectNutrients nutrientsItem) {
+    if (this.nutrients == null) {
+      this.nutrients = new ArrayList<BrandedFoodObjectNutrients>();
+    }
+    this.nutrients.add(nutrientsItem);
+    return this;
+  }
+
   /**
-   * Get nutrients
+   * An array containing nutrient informatio objects for this food item
    * @return nutrients
    **/
   @JsonProperty("nutrients")
-  @Schema(description = "")
-  public BrandedFoodObjectNutrients getNutrients() {
+  @Schema(description = "An array containing nutrient informatio objects for this food item")
+  public List<BrandedFoodObjectNutrients> getNutrients() {
     return nutrients;
   }
 
-  public void setNutrients(BrandedFoodObjectNutrients nutrients) {
+  public void setNutrients(List<BrandedFoodObjectNutrients> nutrients) {
     this.nutrients = nutrients;
   }
 
