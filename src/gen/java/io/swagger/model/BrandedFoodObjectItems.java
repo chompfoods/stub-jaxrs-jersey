@@ -36,7 +36,7 @@ import javax.validation.constraints.*;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-22T19:40:25.514Z[GMT]")public class BrandedFoodObjectItems   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:07:59.988Z[GMT]")public class BrandedFoodObjectItems   {
   @JsonProperty("barcode")
   private String barcode = null;
 
@@ -111,9 +111,6 @@ import javax.validation.constraints.*;
 
   @JsonProperty("vitamins")
   private List<String> vitamins = null;
-
-  @JsonProperty("common_names")
-  private List<String> commonNames = null;
 
   @JsonProperty("description")
   private String description = null;
@@ -695,33 +692,6 @@ import javax.validation.constraints.*;
     this.vitamins = vitamins;
   }
 
-  public BrandedFoodObjectItems commonNames(List<String> commonNames) {
-    this.commonNames = commonNames;
-    return this;
-  }
-
-  public BrandedFoodObjectItems addCommonNamesItem(String commonNamesItem) {
-    if (this.commonNames == null) {
-      this.commonNames = new ArrayList<String>();
-    }
-    this.commonNames.add(commonNamesItem);
-    return this;
-  }
-
-  /**
-   * An array containing other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; a common name may be \&quot;Chicken enchilada\&quot;)
-   * @return commonNames
-   **/
-  @JsonProperty("common_names")
-  @Schema(description = "An array containing other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" a common name may be \"Chicken enchilada\")")
-  public List<String> getCommonNames() {
-    return commonNames;
-  }
-
-  public void setCommonNames(List<String> commonNames) {
-    this.commonNames = commonNames;
-  }
-
   public BrandedFoodObjectItems description(String description) {
     this.description = description;
     return this;
@@ -822,7 +792,6 @@ import javax.validation.constraints.*;
         Objects.equals(this.minerals, brandedFoodObjectItems.minerals) &&
         Objects.equals(this.traces, brandedFoodObjectItems.traces) &&
         Objects.equals(this.vitamins, brandedFoodObjectItems.vitamins) &&
-        Objects.equals(this.commonNames, brandedFoodObjectItems.commonNames) &&
         Objects.equals(this.description, brandedFoodObjectItems.description) &&
         Objects.equals(this.keywords, brandedFoodObjectItems.keywords) &&
         Objects.equals(this.footnote, brandedFoodObjectItems.footnote);
@@ -830,7 +799,7 @@ import javax.validation.constraints.*;
 
   @Override
   public int hashCode() {
-    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, components, portions, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, commonNames, description, keywords, footnote);
+    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, components, portions, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, description, keywords, footnote);
   }
 
 
@@ -864,7 +833,6 @@ import javax.validation.constraints.*;
     sb.append("    minerals: ").append(toIndentedString(minerals)).append("\n");
     sb.append("    traces: ").append(toIndentedString(traces)).append("\n");
     sb.append("    vitamins: ").append(toIndentedString(vitamins)).append("\n");
-    sb.append("    commonNames: ").append(toIndentedString(commonNames)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    keywords: ").append(toIndentedString(keywords)).append("\n");
     sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
