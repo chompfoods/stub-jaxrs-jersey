@@ -20,35 +20,36 @@ import java.math.BigDecimal;
 import javax.validation.constraints.*;
 
 /**
- * BrandedFoodObjectNutrientsChomp
+ * An object containing information on a specific component of this food item
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:12:53.239Z[GMT]")public class BrandedFoodObjectNutrientsChomp   {
+@Schema(description = "An object containing information on a specific component of this food item")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T13:12:53.239Z[GMT]")public class IngredientObjectComponents   {
   @JsonProperty("name")
   private String name = null;
 
-  @JsonProperty("measurement_unit")
-  private String measurementUnit = null;
+  @JsonProperty("pct_weight")
+  private BigDecimal pctWeight = null;
 
-  @JsonProperty("per_100g")
-  private BigDecimal per100g = null;
+  @JsonProperty("gram_weight")
+  private BigDecimal gramWeight = null;
 
-  @JsonProperty("per_serving")
-  private BigDecimal perServing = null;
+  @JsonProperty("is_refuse")
+  private Boolean isRefuse = null;
 
-  @JsonProperty("total")
-  private BigDecimal total = null;
+  @JsonProperty("data_points")
+  private Integer dataPoints = null;
 
-  public BrandedFoodObjectNutrientsChomp name(String name) {
+  public IngredientObjectComponents name(String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * Nutrient name
+   * The kind of component, e.g. bone
    * @return name
    **/
   @JsonProperty("name")
-  @Schema(description = "Nutrient name")
+  @Schema(description = "The kind of component, e.g. bone")
   public String getName() {
     return name;
   }
@@ -57,80 +58,80 @@ import javax.validation.constraints.*;
     this.name = name;
   }
 
-  public BrandedFoodObjectNutrientsChomp measurementUnit(String measurementUnit) {
-    this.measurementUnit = measurementUnit;
+  public IngredientObjectComponents pctWeight(BigDecimal pctWeight) {
+    this.pctWeight = pctWeight;
     return this;
   }
 
   /**
-   * The unit used for measure (e.g. if mesure is 3 tsp, the unit is tsp)
-   * @return measurementUnit
+   * The weight of the component as a percentage of the total weight of the food
+   * @return pctWeight
    **/
-  @JsonProperty("measurement_unit")
-  @Schema(description = "The unit used for measure (e.g. if mesure is 3 tsp, the unit is tsp)")
-  public String getMeasurementUnit() {
-    return measurementUnit;
+  @JsonProperty("pct_weight")
+  @Schema(description = "The weight of the component as a percentage of the total weight of the food")
+  public BigDecimal getPctWeight() {
+    return pctWeight;
   }
 
-  public void setMeasurementUnit(String measurementUnit) {
-    this.measurementUnit = measurementUnit;
+  public void setPctWeight(BigDecimal pctWeight) {
+    this.pctWeight = pctWeight;
   }
 
-  public BrandedFoodObjectNutrientsChomp per100g(BigDecimal per100g) {
-    this.per100g = per100g;
+  public IngredientObjectComponents gramWeight(BigDecimal gramWeight) {
+    this.gramWeight = gramWeight;
     return this;
   }
 
   /**
-   * Amount of the nutrient per 100g of food
-   * @return per100g
+   * The weight of the component in grams
+   * @return gramWeight
    **/
-  @JsonProperty("per_100g")
-  @Schema(description = "Amount of the nutrient per 100g of food")
-  public BigDecimal getPer100g() {
-    return per100g;
+  @JsonProperty("gram_weight")
+  @Schema(description = "The weight of the component in grams")
+  public BigDecimal getGramWeight() {
+    return gramWeight;
   }
 
-  public void setPer100g(BigDecimal per100g) {
-    this.per100g = per100g;
+  public void setGramWeight(BigDecimal gramWeight) {
+    this.gramWeight = gramWeight;
   }
 
-  public BrandedFoodObjectNutrientsChomp perServing(BigDecimal perServing) {
-    this.perServing = perServing;
+  public IngredientObjectComponents isRefuse(Boolean isRefuse) {
+    this.isRefuse = isRefuse;
     return this;
   }
 
   /**
-   * Nutrient value per serving
-   * @return perServing
+   * Whether the component is refuse, i.e. not edible
+   * @return isRefuse
    **/
-  @JsonProperty("per_serving")
-  @Schema(description = "Nutrient value per serving")
-  public BigDecimal getPerServing() {
-    return perServing;
+  @JsonProperty("is_refuse")
+  @Schema(description = "Whether the component is refuse, i.e. not edible")
+  public Boolean isIsRefuse() {
+    return isRefuse;
   }
 
-  public void setPerServing(BigDecimal perServing) {
-    this.perServing = perServing;
+  public void setIsRefuse(Boolean isRefuse) {
+    this.isRefuse = isRefuse;
   }
 
-  public BrandedFoodObjectNutrientsChomp total(BigDecimal total) {
-    this.total = total;
+  public IngredientObjectComponents dataPoints(Integer dataPoints) {
+    this.dataPoints = dataPoints;
     return this;
   }
 
   /**
-   * Total nutrient value
-   * @return total
+   * The number of obersvations on which the measure is based
+   * @return dataPoints
    **/
-  @JsonProperty("total")
-  @Schema(description = "Total nutrient value")
-  public BigDecimal getTotal() {
-    return total;
+  @JsonProperty("data_points")
+  @Schema(description = "The number of obersvations on which the measure is based")
+  public Integer getDataPoints() {
+    return dataPoints;
   }
 
-  public void setTotal(BigDecimal total) {
-    this.total = total;
+  public void setDataPoints(Integer dataPoints) {
+    this.dataPoints = dataPoints;
   }
 
 
@@ -142,30 +143,30 @@ import javax.validation.constraints.*;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectNutrientsChomp brandedFoodObjectNutrientsChomp = (BrandedFoodObjectNutrientsChomp) o;
-    return Objects.equals(this.name, brandedFoodObjectNutrientsChomp.name) &&
-        Objects.equals(this.measurementUnit, brandedFoodObjectNutrientsChomp.measurementUnit) &&
-        Objects.equals(this.per100g, brandedFoodObjectNutrientsChomp.per100g) &&
-        Objects.equals(this.perServing, brandedFoodObjectNutrientsChomp.perServing) &&
-        Objects.equals(this.total, brandedFoodObjectNutrientsChomp.total);
+    IngredientObjectComponents ingredientObjectComponents = (IngredientObjectComponents) o;
+    return Objects.equals(this.name, ingredientObjectComponents.name) &&
+        Objects.equals(this.pctWeight, ingredientObjectComponents.pctWeight) &&
+        Objects.equals(this.gramWeight, ingredientObjectComponents.gramWeight) &&
+        Objects.equals(this.isRefuse, ingredientObjectComponents.isRefuse) &&
+        Objects.equals(this.dataPoints, ingredientObjectComponents.dataPoints);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, measurementUnit, per100g, perServing, total);
+    return Objects.hash(name, pctWeight, gramWeight, isRefuse, dataPoints);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectNutrientsChomp {\n");
+    sb.append("class IngredientObjectComponents {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    measurementUnit: ").append(toIndentedString(measurementUnit)).append("\n");
-    sb.append("    per100g: ").append(toIndentedString(per100g)).append("\n");
-    sb.append("    perServing: ").append(toIndentedString(perServing)).append("\n");
-    sb.append("    total: ").append(toIndentedString(total)).append("\n");
+    sb.append("    pctWeight: ").append(toIndentedString(pctWeight)).append("\n");
+    sb.append("    gramWeight: ").append(toIndentedString(gramWeight)).append("\n");
+    sb.append("    isRefuse: ").append(toIndentedString(isRefuse)).append("\n");
+    sb.append("    dataPoints: ").append(toIndentedString(dataPoints)).append("\n");
     sb.append("}");
     return sb.toString();
   }
