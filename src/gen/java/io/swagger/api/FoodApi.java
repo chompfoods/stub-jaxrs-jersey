@@ -36,7 +36,7 @@ import javax.validation.constraints.*;
 @Path("/food")
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T17:11:27.834Z[GMT]")public class FoodApi  {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-24T13:21:53.331Z[GMT]")public class FoodApi  {
    private final FoodApiService delegate;
 
    public FoodApi(@Context ServletConfig servletContext) {
@@ -73,9 +73,9 @@ import javax.validation.constraints.*;
         
         @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
         
-        @ApiResponse(responseCode = "403", description = "**Forbidden** - Disallowed entity. "),
+        @ApiResponse(responseCode = "403", description = ""),
         
-        @ApiResponse(responseCode = "404", description = "**Not found** - No food items exist that match your query parameters. "),
+        @ApiResponse(responseCode = "404", description = "**Not found** - No food items were found. "),
         
         @ApiResponse(responseCode = "500", description = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
     public Response foodBrandedBarcodePhpGet(@Parameter(description = "#### UPC/EAN barcode  **Example** > ```&code=0842234000988``` ",required=true) @QueryParam("code") String code
@@ -96,9 +96,9 @@ import javax.validation.constraints.*;
         
         @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
         
-        @ApiResponse(responseCode = "403", description = "**Forbidden** - Disallowed entity. "),
+        @ApiResponse(responseCode = "403", description = ""),
         
-        @ApiResponse(responseCode = "404", description = "**Not found** - No food items exist that match your query parameters. "),
+        @ApiResponse(responseCode = "404", description = "**Not found** - No food items were found. "),
         
         @ApiResponse(responseCode = "500", description = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
     public Response foodBrandedNamePhpGet(@Parameter(description = "#### Search for branded food items using a general food name keyword. This does not have to exactly match the \"official\" name for the food.  **Example** > ```&name=Starburst``` ",required=true) @QueryParam("name") String name
@@ -122,9 +122,9 @@ import javax.validation.constraints.*;
         
         @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
         
-        @ApiResponse(responseCode = "403", description = "**Forbidden** - Disallowed entity. "),
+        @ApiResponse(responseCode = "403", description = ""),
         
-        @ApiResponse(responseCode = "404", description = "**Not found** - No food items exist that match your query parameters. "),
+        @ApiResponse(responseCode = "404", description = "**Not found** - No food items were found. "),
         
         @ApiResponse(responseCode = "500", description = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
     public Response foodBrandedSearchPhpGet(@Parameter(description = "#### Filter the search to only include branded foods that contain a specific allergen.  **Example** > ```&allergen=Peanuts```  **Important Note**: This parameter cannot be used alone. It must be paired with at least 1 additional parameter. ") @QueryParam("allergen") String allergen
@@ -160,9 +160,9 @@ import javax.validation.constraints.*;
         
         @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
         
-        @ApiResponse(responseCode = "403", description = "**Forbidden** - Disallowed entity. "),
+        @ApiResponse(responseCode = "403", description = ""),
         
-        @ApiResponse(responseCode = "404", description = "**Not found** - No food items exist that match your query parameters. "),
+        @ApiResponse(responseCode = "404", description = "**Not found** - No food items were found. "),
         
         @ApiResponse(responseCode = "500", description = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
     public Response foodIngredientSearchPhpGet(@Parameter(description = "Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach&list=true```  **Important Notes**    * Set the \"list\" parameter to \"true\" before passing in a comma-separated list of ingredients.   * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. ",required=true) @QueryParam("find") Integer find

@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
  * An object containing additional information on the countries where this item is found
  */
 @Schema(description = "An object containing additional information on the countries where this item is found")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-23T17:11:27.834Z[GMT]")public class BrandedFoodObjectCountryDetails   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-24T13:21:53.331Z[GMT]")public class BrandedFoodObjectCountryDetails   {
   @JsonProperty("english_speaking")
   private Integer englishSpeaking = null;
 
