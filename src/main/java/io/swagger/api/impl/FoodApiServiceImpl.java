@@ -17,7 +17,7 @@ import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.validation.constraints.*;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-24T14:21:11.988Z[GMT]")public class FoodApiServiceImpl extends FoodApiService {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-25T22:35:03.310Z[GMT]")public class FoodApiServiceImpl extends FoodApiService {
     @Override
     public Response foodBrandedBarcodePhpGet( @NotNull String code, SecurityContext securityContext) throws NotFoundException {
         // do some magic!

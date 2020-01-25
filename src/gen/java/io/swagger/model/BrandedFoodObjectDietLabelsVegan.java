@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
  * An object containing information on this item&#x27;s compatibility with the Vegan diets
  */
 @Schema(description = "An object containing information on this item's compatibility with the Vegan diets")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-24T14:21:11.988Z[GMT]")public class BrandedFoodObjectDietLabelsVegan   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-25T22:35:03.310Z[GMT]")public class BrandedFoodObjectDietLabelsVegan   {
   @JsonProperty("name")
   private String name = null;
 
