@@ -36,7 +36,7 @@ import javax.validation.constraints.*;
 @Path("/food")
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-27T21:18:02.311Z[GMT]")public class FoodApi  {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-27T21:28:00.434Z[GMT]")public class FoodApi  {
    private final FoodApiService delegate;
 
    public FoodApi(@Context ServletConfig servletContext) {
@@ -98,9 +98,9 @@ import javax.validation.constraints.*;
         
         @ApiResponse(responseCode = "500", description = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
     public Response foodBrandedNamePhpGet(@Parameter(description = "#### Search for branded food items using a general food name keyword. This does not have to exactly match the \"official\" name for the food.  **Example** > ```&name=Starburst``` ",required=true) @QueryParam("name") String name
-,@Parameter(description = "#### Set maximum number of records you want the API to return.  **Example** > ```&limit=10``` ", schema=@Schema(allowableValues={ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" })
+,@Parameter(description = "#### Set maximum number of records you want the API to return. The default value is \"**10**.\"  **Example** > ```&limit=10``` ", schema=@Schema(allowableValues={ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" })
 ) @QueryParam("limit") Integer limit
-,@Parameter(description = "#### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on.  **Example** > ```&page=1``` ") @QueryParam("page") Integer page
+,@Parameter(description = "#### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on. The default value is \"**1**.\"  **Example** > ```&page=1``` ") @QueryParam("page") Integer page
 ,@Context SecurityContext securityContext)
     throws NotFoundException {
         return delegate.foodBrandedNamePhpGet(name,limit,page,securityContext);
@@ -134,9 +134,9 @@ import javax.validation.constraints.*;
 ,@Parameter(description = "#### Filter the search to only include branded foods that contain a specific ingredient made using palm oil.  **Example** > ```&palm_oil=E160a Beta Carotene``` ") @QueryParam("palm_oil") String palmOil
 ,@Parameter(description = "### Filter the search to only include branded foods that contain a specific trace ingredient.  **Example** > ```&trace=Tree Nuts```  **Important Note**: This parameter cannot be used alone. It must be paired with at least 1 additional parameter. ") @QueryParam("trace") String trace
 ,@Parameter(description = "#### Filter the search to only include branded foods that contain a specific vitamin.  **Example** > ```&vitamin=Biotin``` ") @QueryParam("vitamin") String vitamin
-,@Parameter(description = "#### Set maximum number of records you want the API to return.  **Example** > ```&limit=10``` ", schema=@Schema(allowableValues={ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" })
+,@Parameter(description = "#### Set maximum number of records you want the API to return. The default value is \"**10**.\"  **Example** > ```&limit=10``` ", schema=@Schema(allowableValues={ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" })
 ) @QueryParam("limit") Integer limit
-,@Parameter(description = "#### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on.  **Example** > ```&page=1``` ") @QueryParam("page") Integer page
+,@Parameter(description = "#### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on. The default value is \"**1**.\"  **Example** > ```&page=1``` ") @QueryParam("page") Integer page
 ,@Context SecurityContext securityContext)
     throws NotFoundException {
         return delegate.foodBrandedSearchPhpGet(allergen,brand,category,country,diet,ingredient,keyword,mineral,nutrient,palmOil,trace,vitamin,limit,page,securityContext);
@@ -158,8 +158,8 @@ import javax.validation.constraints.*;
         
         @ApiResponse(responseCode = "500", description = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
     public Response foodIngredientSearchPhpGet(@Parameter(description = "Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. ",required=true) @QueryParam("find") String find
-,@Parameter(description = "#### Optionally filter the search result to only include raw ingredients.  **Example** > ```&raw=true``` ") @QueryParam("raw") Boolean raw
-,@Parameter(description = "#### Set maximum number of records you want the API to return, per search term.  **Example** > ```&limit=3``` ", schema=@Schema(allowableValues={ "1", "2", "3" })
+,@Parameter(description = "#### Optionally filter the search result to only include raw ingredients. The default value is \"**false**.\"  **Example** > ```&raw=true``` ") @QueryParam("raw") Boolean raw
+,@Parameter(description = "#### Set maximum number of records you want the API to return, per search term. The default value is \"**1**.\"  **Example** > ```&limit=3``` ", schema=@Schema(allowableValues={ "1", "2", "3" })
 ) @QueryParam("limit") Integer limit
 ,@Context SecurityContext securityContext)
     throws NotFoundException {
