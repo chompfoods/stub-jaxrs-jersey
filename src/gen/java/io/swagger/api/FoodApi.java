@@ -36,7 +36,7 @@ import javax.validation.constraints.*;
 @Path("/food")
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-27T21:16:22.689Z[GMT]")public class FoodApi  {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-27T21:18:02.311Z[GMT]")public class FoodApi  {
    private final FoodApiService delegate;
 
    public FoodApi(@Context ServletConfig servletContext) {
@@ -157,7 +157,7 @@ import javax.validation.constraints.*;
         @ApiResponse(responseCode = "404", description = "**Not found** - No food items were found. "),
         
         @ApiResponse(responseCode = "500", description = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
-    public Response foodIngredientSearchPhpGet(@Parameter(description = "Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. ",required=true) @QueryParam("find") Integer find
+    public Response foodIngredientSearchPhpGet(@Parameter(description = "Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. ",required=true) @QueryParam("find") String find
 ,@Parameter(description = "#### Optionally filter the search result to only include raw ingredients.  **Example** > ```&raw=true``` ") @QueryParam("raw") Boolean raw
 ,@Parameter(description = "#### Set maximum number of records you want the API to return, per search term.  **Example** > ```&limit=3``` ", schema=@Schema(allowableValues={ "1", "2", "3" })
 ) @QueryParam("limit") Integer limit
