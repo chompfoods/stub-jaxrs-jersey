@@ -25,7 +25,7 @@ import javax.validation.constraints.*;
  * An object containing this item&#x27;s compatibility grades for each supported diet
  */
 @Schema(description = "An object containing this item's compatibility grades for each supported diet")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-28T13:53:56.487Z[GMT]")public class BrandedFoodObjectDietLabels   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-28T14:07:08.353Z[GMT]")public class BrandedFoodObjectDietLabels   {
   @JsonProperty("vegan")
   private BrandedFoodObjectDietLabelsVegan vegan = null;
 
