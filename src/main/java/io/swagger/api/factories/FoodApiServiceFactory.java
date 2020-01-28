@@ -3,7 +3,7 @@ package io.swagger.api.factories;
 import io.swagger.api.FoodApiService;
 import io.swagger.api.impl.FoodApiServiceImpl;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-28T13:14:16.144Z[GMT]")public class FoodApiServiceFactory {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-28T13:53:56.487Z[GMT]")public class FoodApiServiceFactory {
     private final static FoodApiService service = new FoodApiServiceImpl();
 
     public static FoodApiService getFoodApi() {
