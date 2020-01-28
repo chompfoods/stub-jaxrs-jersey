@@ -17,7 +17,7 @@ import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.validation.constraints.*;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-27T21:28:00.434Z[GMT]")public class FoodApiServiceImpl extends FoodApiService {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-28T13:14:16.144Z[GMT]")public class FoodApiServiceImpl extends FoodApiService {
     @Override
     public Response foodBrandedBarcodePhpGet( @NotNull String code, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
@@ -34,7 +34,7 @@ import javax.validation.constraints.*;
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
     @Override
-    public Response foodIngredientSearchPhpGet( @NotNull String find,  Boolean raw,  Integer limit, SecurityContext securityContext) throws NotFoundException {
+    public Response foodIngredientSearchPhpGet( @NotNull String find,  Integer limit, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
