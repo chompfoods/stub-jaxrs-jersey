@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
  * An object containing serving information for this item
  */
 @Schema(description = "An object containing serving information for this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-28T14:08:55.780Z[GMT]")public class BrandedFoodObjectServing   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-30T02:08:15.852Z[GMT]")public class BrandedFoodObjectServing   {
   @JsonProperty("size")
   private String size = null;
 

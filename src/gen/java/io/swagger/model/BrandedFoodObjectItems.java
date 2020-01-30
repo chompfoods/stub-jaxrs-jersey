@@ -31,7 +31,7 @@ import javax.validation.constraints.*;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-28T14:08:55.780Z[GMT]")public class BrandedFoodObjectItems   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-30T02:08:15.852Z[GMT]")public class BrandedFoodObjectItems   {
   @JsonProperty("barcode")
   private String barcode = null;
 
