@@ -1,6 +1,6 @@
 /*
  * Chomp Food Database API Documentation
- * __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | | 
+ * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php) 
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -23,7 +23,7 @@ import javax.validation.constraints.*;
  * An object containing information on a specific component of this food item
  */
 @Schema(description = "An object containing information on a specific component of this food item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T04:55:10.866Z[GMT]")public class BrandedFoodObjectComponents   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-30T02:08:15.852Z[GMT]")public class IngredientObjectComponents   {
   @JsonProperty("name")
   private String name = null;
 
@@ -39,7 +39,7 @@ import javax.validation.constraints.*;
   @JsonProperty("data_points")
   private Integer dataPoints = null;
 
-  public BrandedFoodObjectComponents name(String name) {
+  public IngredientObjectComponents name(String name) {
     this.name = name;
     return this;
   }
@@ -58,7 +58,7 @@ import javax.validation.constraints.*;
     this.name = name;
   }
 
-  public BrandedFoodObjectComponents pctWeight(BigDecimal pctWeight) {
+  public IngredientObjectComponents pctWeight(BigDecimal pctWeight) {
     this.pctWeight = pctWeight;
     return this;
   }
@@ -77,7 +77,7 @@ import javax.validation.constraints.*;
     this.pctWeight = pctWeight;
   }
 
-  public BrandedFoodObjectComponents gramWeight(BigDecimal gramWeight) {
+  public IngredientObjectComponents gramWeight(BigDecimal gramWeight) {
     this.gramWeight = gramWeight;
     return this;
   }
@@ -96,7 +96,7 @@ import javax.validation.constraints.*;
     this.gramWeight = gramWeight;
   }
 
-  public BrandedFoodObjectComponents isRefuse(Boolean isRefuse) {
+  public IngredientObjectComponents isRefuse(Boolean isRefuse) {
     this.isRefuse = isRefuse;
     return this;
   }
@@ -115,7 +115,7 @@ import javax.validation.constraints.*;
     this.isRefuse = isRefuse;
   }
 
-  public BrandedFoodObjectComponents dataPoints(Integer dataPoints) {
+  public IngredientObjectComponents dataPoints(Integer dataPoints) {
     this.dataPoints = dataPoints;
     return this;
   }
@@ -143,12 +143,12 @@ import javax.validation.constraints.*;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectComponents brandedFoodObjectComponents = (BrandedFoodObjectComponents) o;
-    return Objects.equals(this.name, brandedFoodObjectComponents.name) &&
-        Objects.equals(this.pctWeight, brandedFoodObjectComponents.pctWeight) &&
-        Objects.equals(this.gramWeight, brandedFoodObjectComponents.gramWeight) &&
-        Objects.equals(this.isRefuse, brandedFoodObjectComponents.isRefuse) &&
-        Objects.equals(this.dataPoints, brandedFoodObjectComponents.dataPoints);
+    IngredientObjectComponents ingredientObjectComponents = (IngredientObjectComponents) o;
+    return Objects.equals(this.name, ingredientObjectComponents.name) &&
+        Objects.equals(this.pctWeight, ingredientObjectComponents.pctWeight) &&
+        Objects.equals(this.gramWeight, ingredientObjectComponents.gramWeight) &&
+        Objects.equals(this.isRefuse, ingredientObjectComponents.isRefuse) &&
+        Objects.equals(this.dataPoints, ingredientObjectComponents.dataPoints);
   }
 
   @Override
@@ -160,7 +160,7 @@ import javax.validation.constraints.*;
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectComponents {\n");
+    sb.append("class IngredientObjectComponents {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    pctWeight: ").append(toIndentedString(pctWeight)).append("\n");

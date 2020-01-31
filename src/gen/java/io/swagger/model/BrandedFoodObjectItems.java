@@ -1,6 +1,6 @@
 /*
  * Chomp Food Database API Documentation
- * __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | | 
+ * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php) 
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -15,18 +15,14 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.model.BrandedFoodObjectCalorieConversionFactor;
-import io.swagger.model.BrandedFoodObjectComponents;
 import io.swagger.model.BrandedFoodObjectCountryDetails;
 import io.swagger.model.BrandedFoodObjectDietFlags;
 import io.swagger.model.BrandedFoodObjectDietLabels;
 import io.swagger.model.BrandedFoodObjectNutrients;
 import io.swagger.model.BrandedFoodObjectPackage;
 import io.swagger.model.BrandedFoodObjectPackagingPhotos;
-import io.swagger.model.BrandedFoodObjectPortions;
 import io.swagger.model.BrandedFoodObjectServing;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import javax.validation.constraints.*;
@@ -35,7 +31,7 @@ import javax.validation.constraints.*;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-18T04:55:10.866Z[GMT]")public class BrandedFoodObjectItems   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-01-30T02:08:15.852Z[GMT]")public class BrandedFoodObjectItems   {
   @JsonProperty("barcode")
   private String barcode = null;
 
@@ -58,13 +54,7 @@ import javax.validation.constraints.*;
   private List<String> categories = null;
 
   @JsonProperty("nutrients")
-  private BrandedFoodObjectNutrients nutrients = null;
-
-  @JsonProperty("calorie_conversion_factor")
-  private BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = null;
-
-  @JsonProperty("protein_conversion_factor")
-  private BigDecimal proteinConversionFactor = null;
+  private List<BrandedFoodObjectNutrients> nutrients = null;
 
   @JsonProperty("diet_labels")
   private BrandedFoodObjectDietLabels dietLabels = null;
@@ -74,12 +64,6 @@ import javax.validation.constraints.*;
 
   @JsonProperty("packaging_photos")
   private BrandedFoodObjectPackagingPhotos packagingPhotos = null;
-
-  @JsonProperty("components")
-  private List<BrandedFoodObjectComponents> components = null;
-
-  @JsonProperty("portions")
-  private List<BrandedFoodObjectPortions> portions = null;
 
   @JsonProperty("allergens")
   private List<String> allergens = null;
@@ -108,17 +92,14 @@ import javax.validation.constraints.*;
   @JsonProperty("traces")
   private List<String> traces = null;
 
-  @JsonProperty("common_name")
-  private String commonName = null;
+  @JsonProperty("vitamins")
+  private List<String> vitamins = null;
 
   @JsonProperty("description")
   private String description = null;
 
   @JsonProperty("keywords")
   private List<String> keywords = null;
-
-  @JsonProperty("footnote")
-  private String footnote = null;
 
   public BrandedFoodObjectItems barcode(String barcode) {
     this.barcode = barcode;
@@ -183,11 +164,11 @@ import javax.validation.constraints.*;
   }
 
   /**
-   * Ingredients in order of highest value to least
+   * This food item&#x27;s ingredients from greatest quantity to least
    * @return ingredients
    **/
   @JsonProperty("ingredients")
-  @Schema(description = "Ingredients in order of highest value to least")
+  @Schema(description = "This food item's ingredients from greatest quantity to least")
   public String getIngredients() {
     return ingredients;
   }
@@ -261,61 +242,31 @@ import javax.validation.constraints.*;
     this.categories = categories;
   }
 
-  public BrandedFoodObjectItems nutrients(BrandedFoodObjectNutrients nutrients) {
+  public BrandedFoodObjectItems nutrients(List<BrandedFoodObjectNutrients> nutrients) {
     this.nutrients = nutrients;
     return this;
   }
 
+  public BrandedFoodObjectItems addNutrientsItem(BrandedFoodObjectNutrients nutrientsItem) {
+    if (this.nutrients == null) {
+      this.nutrients = new ArrayList<BrandedFoodObjectNutrients>();
+    }
+    this.nutrients.add(nutrientsItem);
+    return this;
+  }
+
   /**
-   * Get nutrients
+   * An array containing nutrient informatio objects for this food item
    * @return nutrients
    **/
   @JsonProperty("nutrients")
-  @Schema(description = "")
-  public BrandedFoodObjectNutrients getNutrients() {
+  @Schema(description = "An array containing nutrient informatio objects for this food item")
+  public List<BrandedFoodObjectNutrients> getNutrients() {
     return nutrients;
   }
 
-  public void setNutrients(BrandedFoodObjectNutrients nutrients) {
+  public void setNutrients(List<BrandedFoodObjectNutrients> nutrients) {
     this.nutrients = nutrients;
-  }
-
-  public BrandedFoodObjectItems calorieConversionFactor(BrandedFoodObjectCalorieConversionFactor calorieConversionFactor) {
-    this.calorieConversionFactor = calorieConversionFactor;
-    return this;
-  }
-
-  /**
-   * Get calorieConversionFactor
-   * @return calorieConversionFactor
-   **/
-  @JsonProperty("calorie_conversion_factor")
-  @Schema(description = "")
-  public BrandedFoodObjectCalorieConversionFactor getCalorieConversionFactor() {
-    return calorieConversionFactor;
-  }
-
-  public void setCalorieConversionFactor(BrandedFoodObjectCalorieConversionFactor calorieConversionFactor) {
-    this.calorieConversionFactor = calorieConversionFactor;
-  }
-
-  public BrandedFoodObjectItems proteinConversionFactor(BigDecimal proteinConversionFactor) {
-    this.proteinConversionFactor = proteinConversionFactor;
-    return this;
-  }
-
-  /**
-   * The multiplication factor used to calculate protein from nitrogen
-   * @return proteinConversionFactor
-   **/
-  @JsonProperty("protein_conversion_factor")
-  @Schema(description = "The multiplication factor used to calculate protein from nitrogen")
-  public BigDecimal getProteinConversionFactor() {
-    return proteinConversionFactor;
-  }
-
-  public void setProteinConversionFactor(BigDecimal proteinConversionFactor) {
-    this.proteinConversionFactor = proteinConversionFactor;
   }
 
   public BrandedFoodObjectItems dietLabels(BrandedFoodObjectDietLabels dietLabels) {
@@ -381,60 +332,6 @@ import javax.validation.constraints.*;
 
   public void setPackagingPhotos(BrandedFoodObjectPackagingPhotos packagingPhotos) {
     this.packagingPhotos = packagingPhotos;
-  }
-
-  public BrandedFoodObjectItems components(List<BrandedFoodObjectComponents> components) {
-    this.components = components;
-    return this;
-  }
-
-  public BrandedFoodObjectItems addComponentsItem(BrandedFoodObjectComponents componentsItem) {
-    if (this.components == null) {
-      this.components = new ArrayList<BrandedFoodObjectComponents>();
-    }
-    this.components.add(componentsItem);
-    return this;
-  }
-
-  /**
-   * An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
-   * @return components
-   **/
-  @JsonProperty("components")
-  @Schema(description = "An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)")
-  public List<BrandedFoodObjectComponents> getComponents() {
-    return components;
-  }
-
-  public void setComponents(List<BrandedFoodObjectComponents> components) {
-    this.components = components;
-  }
-
-  public BrandedFoodObjectItems portions(List<BrandedFoodObjectPortions> portions) {
-    this.portions = portions;
-    return this;
-  }
-
-  public BrandedFoodObjectItems addPortionsItem(BrandedFoodObjectPortions portionsItem) {
-    if (this.portions == null) {
-      this.portions = new ArrayList<BrandedFoodObjectPortions>();
-    }
-    this.portions.add(portionsItem);
-    return this;
-  }
-
-  /**
-   * An array of objects containing information on discrete amounts of a food found in this item
-   * @return portions
-   **/
-  @JsonProperty("portions")
-  @Schema(description = "An array of objects containing information on discrete amounts of a food found in this item")
-  public List<BrandedFoodObjectPortions> getPortions() {
-    return portions;
-  }
-
-  public void setPortions(List<BrandedFoodObjectPortions> portions) {
-    this.portions = portions;
   }
 
   public BrandedFoodObjectItems allergens(List<String> allergens) {
@@ -664,23 +561,31 @@ import javax.validation.constraints.*;
     this.traces = traces;
   }
 
-  public BrandedFoodObjectItems commonName(String commonName) {
-    this.commonName = commonName;
+  public BrandedFoodObjectItems vitamins(List<String> vitamins) {
+    this.vitamins = vitamins;
+    return this;
+  }
+
+  public BrandedFoodObjectItems addVitaminsItem(String vitaminsItem) {
+    if (this.vitamins == null) {
+      this.vitamins = new ArrayList<String>();
+    }
+    this.vitamins.add(vitaminsItem);
     return this;
   }
 
   /**
-   * Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)
-   * @return commonName
+   * An array of vitamins that are found in this item
+   * @return vitamins
    **/
-  @JsonProperty("common_name")
-  @Schema(description = "Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")")
-  public String getCommonName() {
-    return commonName;
+  @JsonProperty("vitamins")
+  @Schema(description = "An array of vitamins that are found in this item")
+  public List<String> getVitamins() {
+    return vitamins;
   }
 
-  public void setCommonName(String commonName) {
-    this.commonName = commonName;
+  public void setVitamins(List<String> vitamins) {
+    this.vitamins = vitamins;
   }
 
   public BrandedFoodObjectItems description(String description) {
@@ -729,25 +634,6 @@ import javax.validation.constraints.*;
     this.keywords = keywords;
   }
 
-  public BrandedFoodObjectItems footnote(String footnote) {
-    this.footnote = footnote;
-    return this;
-  }
-
-  /**
-   * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
-   * @return footnote
-   **/
-  @JsonProperty("footnote")
-  @Schema(description = "Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.")
-  public String getFootnote() {
-    return footnote;
-  }
-
-  public void setFootnote(String footnote) {
-    this.footnote = footnote;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -766,13 +652,9 @@ import javax.validation.constraints.*;
         Objects.equals(this.serving, brandedFoodObjectItems.serving) &&
         Objects.equals(this.categories, brandedFoodObjectItems.categories) &&
         Objects.equals(this.nutrients, brandedFoodObjectItems.nutrients) &&
-        Objects.equals(this.calorieConversionFactor, brandedFoodObjectItems.calorieConversionFactor) &&
-        Objects.equals(this.proteinConversionFactor, brandedFoodObjectItems.proteinConversionFactor) &&
         Objects.equals(this.dietLabels, brandedFoodObjectItems.dietLabels) &&
         Objects.equals(this.dietFlags, brandedFoodObjectItems.dietFlags) &&
         Objects.equals(this.packagingPhotos, brandedFoodObjectItems.packagingPhotos) &&
-        Objects.equals(this.components, brandedFoodObjectItems.components) &&
-        Objects.equals(this.portions, brandedFoodObjectItems.portions) &&
         Objects.equals(this.allergens, brandedFoodObjectItems.allergens) &&
         Objects.equals(this.brandList, brandedFoodObjectItems.brandList) &&
         Objects.equals(this.countries, brandedFoodObjectItems.countries) &&
@@ -782,15 +664,14 @@ import javax.validation.constraints.*;
         Objects.equals(this.hasEnglishIngredients, brandedFoodObjectItems.hasEnglishIngredients) &&
         Objects.equals(this.minerals, brandedFoodObjectItems.minerals) &&
         Objects.equals(this.traces, brandedFoodObjectItems.traces) &&
-        Objects.equals(this.commonName, brandedFoodObjectItems.commonName) &&
+        Objects.equals(this.vitamins, brandedFoodObjectItems.vitamins) &&
         Objects.equals(this.description, brandedFoodObjectItems.description) &&
-        Objects.equals(this.keywords, brandedFoodObjectItems.keywords) &&
-        Objects.equals(this.footnote, brandedFoodObjectItems.footnote);
+        Objects.equals(this.keywords, brandedFoodObjectItems.keywords);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, components, portions, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, commonName, description, keywords, footnote);
+    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, dietLabels, dietFlags, packagingPhotos, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, description, keywords);
   }
 
 
@@ -807,13 +688,9 @@ import javax.validation.constraints.*;
     sb.append("    serving: ").append(toIndentedString(serving)).append("\n");
     sb.append("    categories: ").append(toIndentedString(categories)).append("\n");
     sb.append("    nutrients: ").append(toIndentedString(nutrients)).append("\n");
-    sb.append("    calorieConversionFactor: ").append(toIndentedString(calorieConversionFactor)).append("\n");
-    sb.append("    proteinConversionFactor: ").append(toIndentedString(proteinConversionFactor)).append("\n");
     sb.append("    dietLabels: ").append(toIndentedString(dietLabels)).append("\n");
     sb.append("    dietFlags: ").append(toIndentedString(dietFlags)).append("\n");
     sb.append("    packagingPhotos: ").append(toIndentedString(packagingPhotos)).append("\n");
-    sb.append("    components: ").append(toIndentedString(components)).append("\n");
-    sb.append("    portions: ").append(toIndentedString(portions)).append("\n");
     sb.append("    allergens: ").append(toIndentedString(allergens)).append("\n");
     sb.append("    brandList: ").append(toIndentedString(brandList)).append("\n");
     sb.append("    countries: ").append(toIndentedString(countries)).append("\n");
@@ -823,10 +700,9 @@ import javax.validation.constraints.*;
     sb.append("    hasEnglishIngredients: ").append(toIndentedString(hasEnglishIngredients)).append("\n");
     sb.append("    minerals: ").append(toIndentedString(minerals)).append("\n");
     sb.append("    traces: ").append(toIndentedString(traces)).append("\n");
-    sb.append("    commonName: ").append(toIndentedString(commonName)).append("\n");
+    sb.append("    vitamins: ").append(toIndentedString(vitamins)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    keywords: ").append(toIndentedString(keywords)).append("\n");
-    sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
     sb.append("}");
     return sb.toString();
   }
