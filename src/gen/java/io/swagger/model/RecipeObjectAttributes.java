@@ -15,47 +15,101 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.model.BrandedFoodObjectItems;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.util.ArrayList;
-import java.util.List;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
 
 /**
- * Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.
+ * An object containing recipe attributes
  */
-@Schema(description = "Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2021-03-09T22:27:18.219Z[GMT]")public class BrandedFoodObject   {
-  @JsonProperty("items")
-  private List<BrandedFoodObjectItems> items = null;
+@Schema(description = "An object containing recipe attributes")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2021-03-09T22:27:18.219Z[GMT]")public class RecipeObjectAttributes   {
+  @JsonProperty("prep_time")
+  private String prepTime = null;
 
-  public BrandedFoodObject items(List<BrandedFoodObjectItems> items) {
-    this.items = items;
-    return this;
-  }
+  @JsonProperty("total_time")
+  private String totalTime = null;
 
-  public BrandedFoodObject addItemsItem(BrandedFoodObjectItems itemsItem) {
-    if (this.items == null) {
-      this.items = new ArrayList<BrandedFoodObjectItems>();
-    }
-    this.items.add(itemsItem);
+  @JsonProperty("servings")
+  private String servings = null;
+
+  @JsonProperty("serving_size")
+  private String servingSize = null;
+
+  public RecipeObjectAttributes prepTime(String prepTime) {
+    this.prepTime = prepTime;
     return this;
   }
 
   /**
-   * An array containing an object for each individual item returned by your API call.
-   * @return items
+   * The time it takes to prep this recipe
+   * @return prepTime
    **/
-  @JsonProperty("items")
-  @Schema(description = "An array containing an object for each individual item returned by your API call.")
-  @Valid
-  public List<BrandedFoodObjectItems> getItems() {
-    return items;
+  @JsonProperty("prep_time")
+  @Schema(description = "The time it takes to prep this recipe")
+  public String getPrepTime() {
+    return prepTime;
   }
 
-  public void setItems(List<BrandedFoodObjectItems> items) {
-    this.items = items;
+  public void setPrepTime(String prepTime) {
+    this.prepTime = prepTime;
+  }
+
+  public RecipeObjectAttributes totalTime(String totalTime) {
+    this.totalTime = totalTime;
+    return this;
+  }
+
+  /**
+   * The total time it takes to make this recipe
+   * @return totalTime
+   **/
+  @JsonProperty("total_time")
+  @Schema(description = "The total time it takes to make this recipe")
+  public String getTotalTime() {
+    return totalTime;
+  }
+
+  public void setTotalTime(String totalTime) {
+    this.totalTime = totalTime;
+  }
+
+  public RecipeObjectAttributes servings(String servings) {
+    this.servings = servings;
+    return this;
+  }
+
+  /**
+   * The number of servings this recipe makes
+   * @return servings
+   **/
+  @JsonProperty("servings")
+  @Schema(description = "The number of servings this recipe makes")
+  public String getServings() {
+    return servings;
+  }
+
+  public void setServings(String servings) {
+    this.servings = servings;
+  }
+
+  public RecipeObjectAttributes servingSize(String servingSize) {
+    this.servingSize = servingSize;
+    return this;
+  }
+
+  /**
+   * The size of each serving
+   * @return servingSize
+   **/
+  @JsonProperty("serving_size")
+  @Schema(description = "The size of each serving")
+  public String getServingSize() {
+    return servingSize;
+  }
+
+  public void setServingSize(String servingSize) {
+    this.servingSize = servingSize;
   }
 
 
@@ -67,22 +121,28 @@ import javax.validation.Valid;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObject brandedFoodObject = (BrandedFoodObject) o;
-    return Objects.equals(this.items, brandedFoodObject.items);
+    RecipeObjectAttributes recipeObjectAttributes = (RecipeObjectAttributes) o;
+    return Objects.equals(this.prepTime, recipeObjectAttributes.prepTime) &&
+        Objects.equals(this.totalTime, recipeObjectAttributes.totalTime) &&
+        Objects.equals(this.servings, recipeObjectAttributes.servings) &&
+        Objects.equals(this.servingSize, recipeObjectAttributes.servingSize);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(items);
+    return Objects.hash(prepTime, totalTime, servings, servingSize);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObject {\n");
+    sb.append("class RecipeObjectAttributes {\n");
     
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    prepTime: ").append(toIndentedString(prepTime)).append("\n");
+    sb.append("    totalTime: ").append(toIndentedString(totalTime)).append("\n");
+    sb.append("    servings: ").append(toIndentedString(servings)).append("\n");
+    sb.append("    servingSize: ").append(toIndentedString(servingSize)).append("\n");
     sb.append("}");
     return sb.toString();
   }

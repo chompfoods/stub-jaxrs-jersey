@@ -20,118 +20,162 @@ import javax.validation.constraints.*;
 import javax.validation.Valid;
 
 /**
- * An object containing information on this item&#x27;s compatibility with Gluten Free diets
+ * An object containing this recipe&#x27;s image URLs
  */
-@Schema(description = "An object containing information on this item's compatibility with Gluten Free diets")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2021-03-09T22:27:18.219Z[GMT]")public class BrandedFoodObjectDietLabelsGlutenFree   {
-  @JsonProperty("name")
-  private String name = null;
+@Schema(description = "An object containing this recipe's image URLs")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2021-03-09T22:27:18.219Z[GMT]")public class RecipeObjectMetaImages   {
+  @JsonProperty("extra_large")
+  private String extraLarge = null;
 
-  @JsonProperty("is_compatible")
-  private Boolean isCompatible = null;
+  @JsonProperty("large")
+  private String large = null;
 
-  @JsonProperty("compatibility_level")
-  private Integer compatibilityLevel = null;
+  @JsonProperty("standard")
+  private String standard = null;
 
-  @JsonProperty("confidence")
-  private Integer confidence = null;
+  @JsonProperty("grid_view")
+  private String gridView = null;
 
-  @JsonProperty("confidence_description")
-  private String confidenceDescription = null;
+  @JsonProperty("small")
+  private String small = null;
 
-  public BrandedFoodObjectDietLabelsGlutenFree name(String name) {
-    this.name = name;
+  @JsonProperty("thumbnail")
+  private String thumbnail = null;
+
+  @JsonProperty("extra_small")
+  private String extraSmall = null;
+
+  public RecipeObjectMetaImages extraLarge(String extraLarge) {
+    this.extraLarge = extraLarge;
     return this;
   }
 
   /**
-   * Diet name
-   * @return name
+   * Extra large recipe image
+   * @return extraLarge
    **/
-  @JsonProperty("name")
-  @Schema(description = "Diet name")
-  public String getName() {
-    return name;
+  @JsonProperty("extra_large")
+  @Schema(description = "Extra large recipe image")
+  public String getExtraLarge() {
+    return extraLarge;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setExtraLarge(String extraLarge) {
+    this.extraLarge = extraLarge;
   }
 
-  public BrandedFoodObjectDietLabelsGlutenFree isCompatible(Boolean isCompatible) {
-    this.isCompatible = isCompatible;
+  public RecipeObjectMetaImages large(String large) {
+    this.large = large;
     return this;
   }
 
   /**
-   * Boolean describing if this item is compatible with this diet
-   * @return isCompatible
+   * Large recipe image
+   * @return large
    **/
-  @JsonProperty("is_compatible")
-  @Schema(description = "Boolean describing if this item is compatible with this diet")
-  public Boolean isIsCompatible() {
-    return isCompatible;
+  @JsonProperty("large")
+  @Schema(description = "Large recipe image")
+  public String getLarge() {
+    return large;
   }
 
-  public void setIsCompatible(Boolean isCompatible) {
-    this.isCompatible = isCompatible;
+  public void setLarge(String large) {
+    this.large = large;
   }
 
-  public BrandedFoodObjectDietLabelsGlutenFree compatibilityLevel(Integer compatibilityLevel) {
-    this.compatibilityLevel = compatibilityLevel;
+  public RecipeObjectMetaImages standard(String standard) {
+    this.standard = standard;
     return this;
   }
 
   /**
-   * Numeric representation of how compatible this item is with this diet. Higher values indicate more compatibility
-   * @return compatibilityLevel
+   * Standard recipe image
+   * @return standard
    **/
-  @JsonProperty("compatibility_level")
-  @Schema(description = "Numeric representation of how compatible this item is with this diet. Higher values indicate more compatibility")
-  public Integer getCompatibilityLevel() {
-    return compatibilityLevel;
+  @JsonProperty("standard")
+  @Schema(description = "Standard recipe image")
+  public String getStandard() {
+    return standard;
   }
 
-  public void setCompatibilityLevel(Integer compatibilityLevel) {
-    this.compatibilityLevel = compatibilityLevel;
+  public void setStandard(String standard) {
+    this.standard = standard;
   }
 
-  public BrandedFoodObjectDietLabelsGlutenFree confidence(Integer confidence) {
-    this.confidence = confidence;
+  public RecipeObjectMetaImages gridView(String gridView) {
+    this.gridView = gridView;
     return this;
   }
 
   /**
-   * Boolean that indicates if we are confident in how this item is graded for this diet
-   * @return confidence
+   * Grid view recipe image
+   * @return gridView
    **/
-  @JsonProperty("confidence")
-  @Schema(description = "Boolean that indicates if we are confident in how this item is graded for this diet")
-  public Integer getConfidence() {
-    return confidence;
+  @JsonProperty("grid_view")
+  @Schema(description = "Grid view recipe image")
+  public String getGridView() {
+    return gridView;
   }
 
-  public void setConfidence(Integer confidence) {
-    this.confidence = confidence;
+  public void setGridView(String gridView) {
+    this.gridView = gridView;
   }
 
-  public BrandedFoodObjectDietLabelsGlutenFree confidenceDescription(String confidenceDescription) {
-    this.confidenceDescription = confidenceDescription;
+  public RecipeObjectMetaImages small(String small) {
+    this.small = small;
     return this;
   }
 
   /**
-   * Description of our confidence that this item was graded correctly
-   * @return confidenceDescription
+   * Small recipe image
+   * @return small
    **/
-  @JsonProperty("confidence_description")
-  @Schema(description = "Description of our confidence that this item was graded correctly")
-  public String getConfidenceDescription() {
-    return confidenceDescription;
+  @JsonProperty("small")
+  @Schema(description = "Small recipe image")
+  public String getSmall() {
+    return small;
   }
 
-  public void setConfidenceDescription(String confidenceDescription) {
-    this.confidenceDescription = confidenceDescription;
+  public void setSmall(String small) {
+    this.small = small;
+  }
+
+  public RecipeObjectMetaImages thumbnail(String thumbnail) {
+    this.thumbnail = thumbnail;
+    return this;
+  }
+
+  /**
+   * Thumbnail recipe image
+   * @return thumbnail
+   **/
+  @JsonProperty("thumbnail")
+  @Schema(description = "Thumbnail recipe image")
+  public String getThumbnail() {
+    return thumbnail;
+  }
+
+  public void setThumbnail(String thumbnail) {
+    this.thumbnail = thumbnail;
+  }
+
+  public RecipeObjectMetaImages extraSmall(String extraSmall) {
+    this.extraSmall = extraSmall;
+    return this;
+  }
+
+  /**
+   * Extra small recipe image
+   * @return extraSmall
+   **/
+  @JsonProperty("extra_small")
+  @Schema(description = "Extra small recipe image")
+  public String getExtraSmall() {
+    return extraSmall;
+  }
+
+  public void setExtraSmall(String extraSmall) {
+    this.extraSmall = extraSmall;
   }
 
 
@@ -143,30 +187,34 @@ import javax.validation.Valid;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectDietLabelsGlutenFree brandedFoodObjectDietLabelsGlutenFree = (BrandedFoodObjectDietLabelsGlutenFree) o;
-    return Objects.equals(this.name, brandedFoodObjectDietLabelsGlutenFree.name) &&
-        Objects.equals(this.isCompatible, brandedFoodObjectDietLabelsGlutenFree.isCompatible) &&
-        Objects.equals(this.compatibilityLevel, brandedFoodObjectDietLabelsGlutenFree.compatibilityLevel) &&
-        Objects.equals(this.confidence, brandedFoodObjectDietLabelsGlutenFree.confidence) &&
-        Objects.equals(this.confidenceDescription, brandedFoodObjectDietLabelsGlutenFree.confidenceDescription);
+    RecipeObjectMetaImages recipeObjectMetaImages = (RecipeObjectMetaImages) o;
+    return Objects.equals(this.extraLarge, recipeObjectMetaImages.extraLarge) &&
+        Objects.equals(this.large, recipeObjectMetaImages.large) &&
+        Objects.equals(this.standard, recipeObjectMetaImages.standard) &&
+        Objects.equals(this.gridView, recipeObjectMetaImages.gridView) &&
+        Objects.equals(this.small, recipeObjectMetaImages.small) &&
+        Objects.equals(this.thumbnail, recipeObjectMetaImages.thumbnail) &&
+        Objects.equals(this.extraSmall, recipeObjectMetaImages.extraSmall);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, isCompatible, compatibilityLevel, confidence, confidenceDescription);
+    return Objects.hash(extraLarge, large, standard, gridView, small, thumbnail, extraSmall);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectDietLabelsGlutenFree {\n");
+    sb.append("class RecipeObjectMetaImages {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    isCompatible: ").append(toIndentedString(isCompatible)).append("\n");
-    sb.append("    compatibilityLevel: ").append(toIndentedString(compatibilityLevel)).append("\n");
-    sb.append("    confidence: ").append(toIndentedString(confidence)).append("\n");
-    sb.append("    confidenceDescription: ").append(toIndentedString(confidenceDescription)).append("\n");
+    sb.append("    extraLarge: ").append(toIndentedString(extraLarge)).append("\n");
+    sb.append("    large: ").append(toIndentedString(large)).append("\n");
+    sb.append("    standard: ").append(toIndentedString(standard)).append("\n");
+    sb.append("    gridView: ").append(toIndentedString(gridView)).append("\n");
+    sb.append("    small: ").append(toIndentedString(small)).append("\n");
+    sb.append("    thumbnail: ").append(toIndentedString(thumbnail)).append("\n");
+    sb.append("    extraSmall: ").append(toIndentedString(extraSmall)).append("\n");
     sb.append("}");
     return sb.toString();
   }

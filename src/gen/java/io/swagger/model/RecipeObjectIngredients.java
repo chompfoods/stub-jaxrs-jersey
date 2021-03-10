@@ -15,47 +15,57 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.model.BrandedFoodObjectItems;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.util.ArrayList;
-import java.util.List;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
 
 /**
- * Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.
+ * An object containing information about a specific recipe ingredient
  */
-@Schema(description = "Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2021-03-09T22:27:18.219Z[GMT]")public class BrandedFoodObject   {
-  @JsonProperty("items")
-  private List<BrandedFoodObjectItems> items = null;
+@Schema(description = "An object containing information about a specific recipe ingredient")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2021-03-09T22:27:18.219Z[GMT]")public class RecipeObjectIngredients   {
+  @JsonProperty("quantity")
+  private String quantity = null;
 
-  public BrandedFoodObject items(List<BrandedFoodObjectItems> items) {
-    this.items = items;
-    return this;
-  }
+  @JsonProperty("description")
+  private String description = null;
 
-  public BrandedFoodObject addItemsItem(BrandedFoodObjectItems itemsItem) {
-    if (this.items == null) {
-      this.items = new ArrayList<BrandedFoodObjectItems>();
-    }
-    this.items.add(itemsItem);
+  public RecipeObjectIngredients quantity(String quantity) {
+    this.quantity = quantity;
     return this;
   }
 
   /**
-   * An array containing an object for each individual item returned by your API call.
-   * @return items
+   * The quantity of this ingredient
+   * @return quantity
    **/
-  @JsonProperty("items")
-  @Schema(description = "An array containing an object for each individual item returned by your API call.")
-  @Valid
-  public List<BrandedFoodObjectItems> getItems() {
-    return items;
+  @JsonProperty("quantity")
+  @Schema(description = "The quantity of this ingredient")
+  public String getQuantity() {
+    return quantity;
   }
 
-  public void setItems(List<BrandedFoodObjectItems> items) {
-    this.items = items;
+  public void setQuantity(String quantity) {
+    this.quantity = quantity;
+  }
+
+  public RecipeObjectIngredients description(String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * A description of this ingredient
+   * @return description
+   **/
+  @JsonProperty("description")
+  @Schema(description = "A description of this ingredient")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
 
@@ -67,22 +77,24 @@ import javax.validation.Valid;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObject brandedFoodObject = (BrandedFoodObject) o;
-    return Objects.equals(this.items, brandedFoodObject.items);
+    RecipeObjectIngredients recipeObjectIngredients = (RecipeObjectIngredients) o;
+    return Objects.equals(this.quantity, recipeObjectIngredients.quantity) &&
+        Objects.equals(this.description, recipeObjectIngredients.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(items);
+    return Objects.hash(quantity, description);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObject {\n");
+    sb.append("class RecipeObjectIngredients {\n");
     
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("}");
     return sb.toString();
   }

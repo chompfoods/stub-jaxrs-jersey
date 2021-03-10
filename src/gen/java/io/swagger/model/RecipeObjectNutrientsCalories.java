@@ -15,47 +15,78 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.model.BrandedFoodObjectItems;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.util.ArrayList;
-import java.util.List;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
 
 /**
- * Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.
+ * RecipeObjectNutrientsCalories
  */
-@Schema(description = "Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2021-03-09T22:27:18.219Z[GMT]")public class BrandedFoodObject   {
-  @JsonProperty("items")
-  private List<BrandedFoodObjectItems> items = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2021-03-09T22:27:18.219Z[GMT]")public class RecipeObjectNutrientsCalories   {
+  @JsonProperty("title")
+  private String title = null;
 
-  public BrandedFoodObject items(List<BrandedFoodObjectItems> items) {
-    this.items = items;
-    return this;
-  }
+  @JsonProperty("value")
+  private String value = null;
 
-  public BrandedFoodObject addItemsItem(BrandedFoodObjectItems itemsItem) {
-    if (this.items == null) {
-      this.items = new ArrayList<BrandedFoodObjectItems>();
-    }
-    this.items.add(itemsItem);
+  @JsonProperty("percent")
+  private String percent = null;
+
+  public RecipeObjectNutrientsCalories title(String title) {
+    this.title = title;
     return this;
   }
 
   /**
-   * An array containing an object for each individual item returned by your API call.
-   * @return items
+   * Nutrient name
+   * @return title
    **/
-  @JsonProperty("items")
-  @Schema(description = "An array containing an object for each individual item returned by your API call.")
-  @Valid
-  public List<BrandedFoodObjectItems> getItems() {
-    return items;
+  @JsonProperty("title")
+  @Schema(description = "Nutrient name")
+  public String getTitle() {
+    return title;
   }
 
-  public void setItems(List<BrandedFoodObjectItems> items) {
-    this.items = items;
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public RecipeObjectNutrientsCalories value(String value) {
+    this.value = value;
+    return this;
+  }
+
+  /**
+   * The amount of this nutrient in this recipe
+   * @return value
+   **/
+  @JsonProperty("value")
+  @Schema(description = "The amount of this nutrient in this recipe")
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+  public RecipeObjectNutrientsCalories percent(String percent) {
+    this.percent = percent;
+    return this;
+  }
+
+  /**
+   * The daily recommended percent total for this nutrient
+   * @return percent
+   **/
+  @JsonProperty("percent")
+  @Schema(description = "The daily recommended percent total for this nutrient")
+  public String getPercent() {
+    return percent;
+  }
+
+  public void setPercent(String percent) {
+    this.percent = percent;
   }
 
 
@@ -67,22 +98,26 @@ import javax.validation.Valid;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObject brandedFoodObject = (BrandedFoodObject) o;
-    return Objects.equals(this.items, brandedFoodObject.items);
+    RecipeObjectNutrientsCalories recipeObjectNutrientsCalories = (RecipeObjectNutrientsCalories) o;
+    return Objects.equals(this.title, recipeObjectNutrientsCalories.title) &&
+        Objects.equals(this.value, recipeObjectNutrientsCalories.value) &&
+        Objects.equals(this.percent, recipeObjectNutrientsCalories.percent);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(items);
+    return Objects.hash(title, value, percent);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObject {\n");
+    sb.append("class RecipeObjectNutrientsCalories {\n");
     
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    title: ").append(toIndentedString(title)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    percent: ").append(toIndentedString(percent)).append("\n");
     sb.append("}");
     return sb.toString();
   }
